@@ -1,0 +1,255 @@
+.registerWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto 50px;
+
+    .contentBox {
+        width: 1280px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include blockBG_Style;
+        padding: 45px;
+
+        &>.title {
+            width: 100%;
+            color: $fontColor_1;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin:  0 0 30px;
+        }
+
+        span {
+            font-size: 14px;
+            color: $fontColor_4;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .titleBox {
+            width: 100%;
+            height: 36px;
+            background: $linear_1;
+            color: $fontColor_2;
+            border-radius: 20px;
+            margin: 30px auto 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 55%;
+            height: auto;
+            margin: 40px auto 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            label {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center; 
+                justify-content: flex-end;
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin: 0;
+                }
+                
+                .smallTitle {
+                    font-size: 14px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    color: $fontColor_8;
+                }
+                .smallTitleGray {
+                    font-size: 14px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    color: $fontColor_4;
+                }
+
+                div {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-left: 17px;
+
+                    input {
+                        width: 500px;
+                        height: 45px;
+                        @include inputStyle_0;
+
+                        &.line {
+                            padding-left: 50px;
+                        }
+                    }
+
+                    .date_ic {
+                        position: absolute;
+                        display: block;
+                        width: 24px;
+                        background: transparent;
+                        height: 24px;
+                        top: 12px;
+                        right: 20px;
+
+                        svg {
+                            width: 22px;
+                            height: 22px;
+
+                            .cls-1 {
+                                fill: $mainColor_0;
+                            }
+                        }
+                    }
+
+                    .line_ic {
+                        position: absolute;
+                        display: block;
+                        width: 32px;
+                        height: 32px;
+                        left: 20px;
+                    }
+
+                    .codeBtn {
+                        width: auto;
+                        height: 23px;
+                        @include btnStyle_0;
+                        padding: 0 15px;
+                        position: absolute;
+                        top: 12px;
+                        right: 20px;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+
+                .remind {
+                    width: 340px;
+                    color: $mainColor_1;
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 15px;
+                    // position: absolute;
+                    // left: 15px;
+                    // top: 42px;
+                }
+            }
+        }
+
+        .check {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 45px 0;
+
+            .checkBox {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid $mainColor_1;
+                    margin-right: 10px;
+                    border-radius: 2px;
+                    appearance: none;
+                    cursor: pointer;
+
+                    &:checked {
+                        background-color: $mainColor_1;
+                        position: relative;
+
+                        &::after {
+                            content: "V";
+                            font-weight: bold;
+                            color: azure;
+                            position: absolute;
+                            top: -2px;
+                            left: 1px;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: bold;
+                    cursor: default;
+
+                    span {
+                        color: $link_register;
+                        text-decoration: underline;
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .remind {
+                width: 100%;
+                height: auto;
+                color: $remind_sp;
+                font-size: 12px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+
+        .btnBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 10px 60px 160px;
+
+            button {
+                width: 200px;
+                height: 34px;
+                font-size: 16px;
+                color: $fontColor_2;
+                @include btnStyle_4;
+                background: $Border_11;
+                color: $fontColor_2;
+                border: 1px solid transparent;
+
+                &:hover,&:active,&.active {
+                    background: $mainColor_3;
+                    color: $Border_11;
+                    border-color: $Border_11;
+                }
+
+                &:last-child {
+                    @include btnStyle_3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

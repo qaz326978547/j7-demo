@@ -1,0 +1,59 @@
+.sideBar {
+
+    .asideLogin {
+        width: 117px;
+        height: 117px;
+        border-radius: 100px;
+        box-shadow: 0px 0px 15px $shadowColor_2;
+        position: absolute;
+        top: 990px;
+        right: 10px;
+    }
+
+    //goTop
+    .goTop,
+    .cs_sideBtn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $mainColor_0;
+        position: fixed;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s all;
+
+        &.display {
+            opacity: 1;
+        }
+
+        i {
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-width: 3px 3px 0 0 ;
+            border-style: solid;
+            border-color: 040000;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-45deg);
+        }
+    }
+
+    .goTop {
+        bottom: 80px;
+    }
+
+    .cs_sideBtn {
+        bottom: 10px;
+        opacity: 1;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

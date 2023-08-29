@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>APA Casino</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!--上部-->
+        <div class="top">
+            <!--logo-->
+            <img class="logo" src="../images/icon/logo.png" onclick="window.location.href='../index.html'">
+            <!-- 搜尋 -->
+            <div class="search">
+                <div class="searchGroup">
+                    <label for="">
+                        <input type="text" placeholder="お探しのゲーム名を入力">
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+            <!--右_已登入-->
+            <ul class="user alLogin innerType display">
+                <!--等級-->
+                <li class="lv level_1">
+                    <i></i>
+                    <div class="userGroup">
+                        <p>USER NAME</p>
+                        <button><p>¥88,888</p></button>
+                    </div>
+                </li>
+                <!-- 入金 -->
+                <li class="payment">
+                    <button onclick="window.location.href='./deposit.html'"><i></i></button> 
+                </li>
+                <!-- 振替 -->
+                <li class="transfer">
+                    <button onclick="window.location.href='./transfer.html'"><i></i></button>
+                </li>
+                <!-- 出金 -->
+                <li class="withdraw">
+                    <button onclick="window.location.href='./withdraw.html'"><i></i></button>
+                </li>
+                <!-- インボックス -->
+                <li class="mail">
+                    <button onclick="window.location.href='./mail.html'">
+                        <i></i>
+                        <p class="remind display"></p>
+                    </button>
+                </li>
+                <li class="logout">
+                    <button onclick="window.location.href='../index.html'">ログアウト</button>
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>繁體中文</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option selected>日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <!--選單-->
+        <div class="gameNav">
+            <div class="center">
+                <ul>
+                    <li class="homeBtn" onclick="window.location.href='../index.html'">トップページ</li>
+                    <li class="myBtn" onclick="window.location.href='./member.html'">マイページ</li>
+                    <li class="promotionBtn active" onclick="window.location.href='./promotion.html'">プロモーション</li>
+                    <li class="hotBtn" onclick="window.location.href='./popular.html'">人気ゲーム</li>
+                    <li class="sportBtn"  onclick="window.location.href='./sportPage.html'">スポーツ</li>
+                    <li class="liveBtn" onclick="window.location.href='./livePage.html'">ライブゲーム</li>
+                    <li class="slotBtn" onclick="window.location.href='./slotPage.html'">スロット</li>
+                    <li class="fishBtn" onclick="window.location.href='./fishPage.html'">フィッシング</li>
+                    <li class="boardBtn" onclick="window.location.href='./tablePage.html'">テーブルゲーム</li>
+                </ul>
+            </div>
+        </div>
+        <!--下拉式選單-->
+        <!-- <div class="topGameList">
+            <div class="listWrap">
+                <div class="center">
+                    <i class="prev"></i>
+                    <div class="container">
+                    <ul class="hot">
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_1.png">
+                            </div>
+                            <p>Japanese Mahjong</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_2.png">
+                            </div>
+                            <p>Koi-Koi</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_3.png">
+                            </div>
+                            <p>Big Win Cat</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_4.png">
+                            </div>
+                            <p>Oiran Dream</p>
+                        </li>
+                    </ul>
+                    <ul class="sport">
+                        <li onclick="openSportGame()">
+                            <div>
+                                <img src="../images/partner/sport/36588.png">
+                            </div>
+                            <p>36588 SPORTS</p>
+                        </li>
+                    </ul>
+                    <ul class="live">
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_1.png">
+                            </div>
+                            <p>AG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_2.png">
+                            </div>
+                            <p>MG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_3.png">
+                            </div>
+                            <p>PP CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_4.png">
+                            </div>
+                            <p>EVO CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_5.png">
+                            </div>
+                            <p>ALLBET CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_6.png">
+                            </div>
+                            <p>SA CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_7.png">
+                            </div>
+                            <p>OG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_8.png">
+                            </div>
+                            <p>WM CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_9.png">
+                            </div>
+                            <p>DG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_10.png">
+                            </div>
+                            <p>RG CASINO</p>
+                        </li>
+                    </ul>
+                    <ul class="slot">
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_1.png">
+                            </div>
+                            <p>HABANERO</p>
+                            <div class="fixBox display">
+                                <p class="title">修理中</p>
+                                <p>2022/03/02 PM 2:00 ~</p>
+                                <p>2020/03/02 PM 4:00</p>
+                            </div>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_2.png">
+                            </div>
+                            <p>RSG</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_3.png">
+                            </div>
+                            <p>PP SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_4.png">
+                            </div>
+                            <p>GoldHero</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_5.png">
+                            </div>
+                            <p>PNG</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_6.png">
+                            </div>
+                            <p>JILI SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_7.png">
+                            </div>
+                            <p>YGG</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_8.png">
+                            </div>
+                            <p>Microgaming</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_9.png">
+                            </div>
+                            <p>BOOONGO GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_10.png">
+                            </div>
+                            <p>IFUN GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_11.png">
+                            </div>
+                            <p>EVO PLAY</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_12.png">
+                            </div>
+                            <p>RELAX</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_13.png">
+                            </div>
+                            <p>NO LIMIT CITY</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_14.png">
+                            </div>
+                            <p>AUX</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_15.png">
+                            </div>
+                            <p>TPG GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_16.png">
+                            </div>
+                            <p>SIMPLEPLAY GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_17.png">
+                            </div>
+                            <p>PLAYSON GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_18.png">
+                            </div>
+                            <p>BLUEPRINT GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_19.png">
+                            </div>
+                            <p>RED RAKE GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_20.png">
+                            </div>
+                            <p>4ThePlayer GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_21.png">
+                            </div>
+                            <p>ELK GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_22.png">
+                            </div>
+                            <p>ELYSIUM GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_23.png">
+                            </div>
+                            <p>QUICKSPIN GAMES</p>
+                        </li>
+                    </ul>
+                    <ul class="fish">
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_1.png">
+                            </div>
+                            <p>RSG GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_2.png">
+                            </div>
+                            <p>JILI SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_3.png">
+                            </div>
+                            <p>TPG GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_4.png">
+                            </div>
+                            <p>SIMPLEPLAY GAMES</p>
+                        </li>
+                    </ul>
+                    <ul class="board">
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_1.png">
+                            </div>
+                            <p>HABANERO</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_2.png">
+                            </div>
+                            <p>JILI SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_3.png">
+                            </div>
+                            <p>Microgaming</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_4.png">
+                            </div>
+                            <p>IFUN GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_5.png">
+                            </div>
+                            <p>RED RAKE GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_6.png">
+                            </div>
+                            <p>4ThePlayer GAMES</p>
+                        </li>
+                    </ul>
+                    </div>
+                    <i class="next"></i>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <main>
+        <!--跑馬燈-->
+        <div class="marqueeArea">
+            <div class="center inner">
+                <div class="marqueeWrap">
+                    <p class="title">
+                        <i class="marquee_ic"></i>
+                        お知らせ
+                    </p>
+                    <div class="marquee">
+                        <p>2023/05/03　ニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキスト
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gameWrap promotion">
+            <div class="content">
+                <div class="top">
+                    <div class="banner"></div> 
+                </div>
+                <p class="bigTitle">現在開催されているプロモーション一覧</p>
+                <ul class="promotionList display">
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prPic"></div>
+                        <div class="textBlock">
+                            <p class="prTitle">プロモーションタイトルテキスト位<br>置（文字列が長い場合は2行に表示</p>
+                            <p class="infoBox">
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所<br>
+                                開催期間等詳細表示箇所
+                            </p>
+                            <button class="seeMoreBtn" type="button">プロモーション詳細を見る</button>
+                        </div>
+                    </li>
+                    <div class="countBlock">
+                        <p>
+                            合計
+                            <span class="num">00</span>
+                            件
+                        </p>
+                        <ul>
+                            <svg class="prevBtn" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 6.36 11.31">
+                                <polygon class="cls-1" points=".71 0 0 .71 4.95 5.66 0 10.61 .71 11.31 6.36 5.66 .71 0"></polygon>
+                            </svg>
+                            <li class="active">
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <p>2</p>
+                            </li>
+                            <li>
+                                <p>3</p>
+                            </li>
+                            <li>
+                                <p>4</p>
+                            </li>
+                            <li>
+                                <p>5</p>
+                            </li>
+                            <li>
+                                <p>6</p>
+                            </li>
+                            <li>
+                                <p>7</p>
+                            </li>
+                            <svg class="nextBtn" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 6.36 11.31">
+                                <polygon class="cls-1" points=".71 0 0 .71 4.95 5.66 0 10.61 .71 11.31 6.36 5.66 .71 0"></polygon>
+                              </svg>
+                        </ul>
+                    </div>
+                </ul>
+                <div class="promotionDetail">
+                    <div class="promotionPic"></div>
+                    <div class="pr_title">プロモーションタイトルテキスト位置</div>
+                    <div class="text_block">
+                        <p>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプル<br>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプル
+                        </p>
+                        <p>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキスト<br>
+                            サンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルサンプルプロモー<br>
+                            ション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルサンプルプロモーション詳細テキスト<br>
+                            サンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプル
+                        </p>
+                        <p>サンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプル</p>
+                        <p>プロモーション詳細テキストサンプル</p>
+                        <p>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプル<br>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプル<br>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプル<br>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプル<br>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプル
+                        </p>
+                        <p>
+                            プロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキストサンプルプロモーション詳細テキスト<br>
+                            サンプルプロモーション詳細テキストサンプル
+                        </p>
+                    </div>
+                    <button type="button" class="backBtn">プロモーション一覧に戻る</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <!--goTop-->
+        <button class="goTop">
+            <i></i>
+        </button>
+        <button class="cs_sideBtn ">
+            <svg xmlns="http://www.w3.org/2000/svg" id="footer" viewBox="0 0 27.58 26.52">
+                <path d="M10.84,25.88v-2.2c0-.23,.12-.43,.32-.55l6.02-3.49c.23-.13,.48-.2,.74-.2h3.67s2.42-.19,2.32-2.42V5.42s.1-1.45-2.42-1.65H6.58s-2.23-.19-2.52,1.65v11.71s0,2.13,1.94,2.03h3.16c.34,0,.62,.27,.63,.62l.06,2.51c0,.36-.28,.65-.63,.65H4.94S.48,22.94,0,18V3.1S-.1,0,4.84,0H22.46c.22,.01,4.93,.28,5.12,4.06v14.05c0,.28-.06,.55-.13,.82-.45,1.84-2.28,3.8-5.32,3.98l-4.34,.03c-.11,0-.22,.03-.32,.09l-5.67,3.4c-.42,.25-.96-.05-.96-.54Z"/>
+              </svg>
+        </button>
+    </nav>
+    <footer>
+        <!--下部-->
+       <div class="footerList">
+            <ul>
+                <li>
+                    <img class="logo" src="../images/icon/logo.png" onclick="window.location.href='../index.html'">
+                    <div class="socialGroup">
+                        <svg class="twitter" onclick="window.location.href='//twitter.com'" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m9.03,9.71c.06.11.1.24.18.33,1.7,1.97,3.83,3.25,6.36,3.85.48.11.97.21,1.46.28.4.06.46,0,.45-.41-.03-.72.04-1.43.32-2.1.58-1.4,1.64-2.21,3.11-2.52,1.38-.29,2.57.08,3.63.97.25.21.53.21.79.12.55-.18,1.08-.42,1.61-.63.13-.05.26-.1.39-.15.03.02.06.04.09.06-.05.18-.06.38-.16.52-.26.38-.56.74-.85,1.1-.1.12-.22.23-.32.35l.06.12c.61-.18,1.22-.35,1.82-.53.02.03.04.05.06.08-.21.28-.39.57-.62.82-.3.33-.62.64-.95.93-.31.28-.48.59-.49,1.02-.02,1.87-.42,3.66-1.27,5.32-1.47,2.88-3.68,4.94-6.8,5.98-1.28.43-2.6.65-3.93.64-2.1-.01-4.11-.52-5.95-1.61-.14-.08-.27-.16-.41-.3,2.12.07,4.06-.41,5.87-1.68-.17-.07-.29-.14-.42-.16-1.64-.29-2.68-1.29-3.3-2.78,0-.02,0-.04,0-.13h1.41s.04-.08.06-.12c-1.79-.8-3-1.99-2.93-4.13.54.17,1.03.33,1.51.48.03-.02.05-.04.08-.07-1.69-1.62-2.04-3.46-1.06-5.53.06-.04.13-.08.19-.12Z"/>
+                            </svg>
+                            <svg class="youtube" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m17,9.88c.86,0,1.72-.04,2.57,0,1.61.09,3.22.19,4.82.36,1.1.12,1.85.81,2.1,1.88.22.96.39,1.95.42,2.94.07,1.77.07,3.56-.17,5.32-.06.42-.09.85-.2,1.25-.29,1.05-.99,1.73-2.06,1.92-.8.14-1.62.21-2.43.24-2.32.07-4.65.16-6.97.14-1.76-.02-3.53-.16-5.29-.32-1.57-.14-2.34-.91-2.64-2.46-.33-1.76-.39-3.53-.26-5.31.08-1.11.2-2.22.32-3.33.16-1.46,1.17-2.21,2.48-2.33,1.14-.1,2.29-.16,3.43-.22,1.29-.06,2.58-.1,3.87-.15,0,.02,0,.03,0,.05Zm-2.1,6.97c0,.88,0,1.76,0,2.63,0,.31.07.36.31.22,1.52-.87,3.05-1.75,4.57-2.61.17-.1.17-.19.03-.31-.07-.06-.15-.11-.23-.16-1.45-.84-2.89-1.68-4.34-2.51-.27-.16-.35-.11-.35.2,0,.85,0,1.69,0,2.54Z"/>
+                            </svg>
+                            <svg class="facebook" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m22.55,14.06c-.06.49-.12.97-.18,1.45-.1.76-.2,1.52-.29,2.27-.03.21-.13.28-.33.28-.83,0-1.65-.02-2.48-.02-.4,0-.42.02-.42.42,0,3.03,0,6.06,0,9.09,0,.42,0,.42-.42.42-1.16,0-2.32,0-3.47,0-.3,0-.39-.1-.39-.39,0-3.03,0-6.06,0-9.09,0-.46,0-.46-.47-.46-.89,0-1.78,0-2.67,0-.26,0-.34-.09-.34-.34.01-1.11.01-2.21,0-3.32,0-.26.09-.34.34-.33.91.01,1.82,0,2.73,0,.4,0,.4,0,.4-.39,0-.86-.01-1.72,0-2.57.02-1.37.35-2.64,1.25-3.71.77-.92,1.8-1.32,2.95-1.49,1.19-.18,2.37-.07,3.55.14.29.05.39.2.39.49-.01.88-.01,1.76,0,2.64,0,.25-.09.32-.32.32-.6,0-1.2-.02-1.79.06-.94.13-1.54.7-1.64,1.64-.1.88-.07,1.77-.09,2.66,0,.22.15.23.32.23,1.06,0,2.13-.01,3.19-.02.05,0,.1,0,.19.02Z"/>
+                            </svg>
+                            <svg class="line" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m26.42,15.01c-.36-2.25-1.59-3.91-3.46-5.13-1.82-1.18-3.84-1.69-5.64-1.77-1.26,0-2.16.11-3.04.32-2.32.54-4.3,1.63-5.71,3.58-1.5,2.06-1.73,4.33-.72,6.66.61,1.43,1.67,2.55,2.98,3.41,1.15.76,2.44,1.21,3.79,1.47.3.05.61.12.9.21.42.13.64.45.63.89,0,.38-.05.76-.1,1.14-.06.51.16.72.65.55.27-.09.53-.22.79-.35,1.82-.95,3.49-2.14,5.06-3.44,1.07-.89,2.07-1.85,2.82-3.03.89-1.39,1.31-2.86,1.05-4.51Zm-13.42,3.4c-.71.02-1.43.02-2.14.01-.34-.01-.43-.13-.43-.47v-3.56c0-.37.11-.5.45-.51.33-.01.55.2.56.53.01.45,0,.9,0,1.36,0,.42.01.85,0,1.27-.01.24.07.33.32.32.4-.01.8-.01,1.2,0,.38,0,.5.12.52.5.02.34-.14.54-.48.55Zm2.1-2.26c0,.56.01,1.12,0,1.68,0,.34-.16.55-.43.58-.28.03-.52-.15-.59-.47-.03-.15-.05-.31-.05-.46.02-1.04.04-2.09.06-3.13.01-.36.13-.47.5-.47.29,0,.5.18.51.47.01.6,0,1.2,0,1.8Zm4.65,1.89c0,.26-.09.35-.35.37-.26.02-.5-.04-.68-.24-.19-.21-.38-.43-.55-.66-.36-.48-.71-.97-1.06-1.45-.07-.09-.11-.2-.17-.3-.06.03-.11.07-.16.1v.54c0,.5,0,1,0,1.49-.01.43-.41.66-.75.44-.12-.07-.24-.26-.24-.39-.02-1.22,0-2.44,0-3.66,0-.23.13-.35.35-.39.34-.05.61.09.81.35.49.64.96,1.29,1.45,1.94.06.09.14.17.27.25.01-.09.03-.18.03-.27v-1.83c0-.38.07-.44.46-.45.48-.01.61.07.61.44.01,1.24.01,2.48,0,3.72Zm1.73-2.5s.16.06.25.07c.33.01.66,0,.99.01.13,0,.27.02.39.06.24.09.37.33.33.57-.04.24-.16.35-.46.36-.4.02-.81,0-1.21.01-.32,0-.34.03-.34.36s.01.36.33.37c.32,0,.64-.01.96,0,.14.01.27.03.4.07.24.08.38.35.34.59-.04.25-.19.39-.48.4-.7.01-1.4.02-2.1.01-.3-.01-.45-.2-.46-.52v-3.53c0-.35.12-.48.46-.49.66-.01,1.32,0,1.98,0,.21,0,.42.03.54.25.18.33-.02.71-.42.73-.4.02-.8,0-1.21.01-.11,0-.3.05-.31.11-.03.18,0,.37.02.55Z"/>
+                            </svg>
+                    </div>
+                    <span>©2023 APA Casino.</span>
+                </li>
+                <li>
+                    <p class="title">サイトメニュー</p>
+                    <button type="button" onclick="window.location.href='./help.html'">弊社について</button>
+                    <button type="button" onclick="window.location.href='./help.html'">プライバシーポリシー</button>
+                    <button type="button" onclick="window.location.href='./help.html'">ご利用規約</button>
+                    <button type="button" onclick="window.location.href='./help.html'">責任あるプレイ</button>
+                    <button type="button" onclick="window.location.href='./help.html'">プロモーション</button>
+                    <button type="button" onclick="window.location.href='./help.html'">アフィリエイト</button>
+                    <button type="button" onclick="window.location.href='./help.html'">ライセンス</button>
+                </li>
+                <li>
+                    <p class="title">ユーザーガイド</p>
+                    <button type="button" onclick="window.location.href='./help.html'">KYC</button>
+                    <button type="button" onclick="window.location.href='./help.html'">ゲームルール・遊び方</button>
+                    <button type="button" onclick="window.location.href='./help.html'">プロモーション</button>
+                    <button type="button" onclick="window.location.href='./help.html'">入出金と振替</button>
+                    <button type="button" onclick="window.location.href='./help.html'">入出金方法</button>
+                    <button type="button" onclick="window.location.href='./help.html'">登録とアカウント</button>
+                    <button type="button" onclick="window.location.href='./help.html'">お問い合わせ</button>
+                </li>
+                <li>
+                    <button type="button" class="serviceBtn opposite" onclick="window.location.href='javascript:;'">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 70 70">
+                            <path class="cls-1" d="m50,26.84l.06-.09.24-.4v-.02c1.44-2.62,2.2-5.59,2.2-8.61C52.5,7.95,44.65,0,35,0s-17.51,7.95-17.51,17.72c0,3.02.77,5.99,2.22,8.61v.02s.12.22.12.22l.16.27c.15.25.3.5.46.74,2.43,3.67,6.1,6.28,10.32,7.34,1.38.35,2.8.52,4.23.52s2.85-.17,4.22-.52c4.22-1.06,7.89-3.67,10.32-7.34.16-.24.32-.49.46-.74Zm-2.06-.55s-.07.1-.11.16c-2.15,3.24-5.38,5.55-9.11,6.48-2.42.61-5.02.61-7.45,0-3.72-.93-6.96-3.24-9.11-6.48-.03-.05-.07-.11-.1-.16,1.61-2.81,4.07-5.02,7-6.3,1.53,1.51,3.62,2.45,5.94,2.45s4.41-.94,5.94-2.45c2.93,1.28,5.38,3.49,7,6.29h0Zm-19.4-12.46c0-3.61,2.9-6.55,6.46-6.55s6.45,2.94,6.45,6.55c0,1.38-.42,2.67-1.14,3.72-.45.65-1,1.21-1.64,1.66-1.04.74-2.31,1.17-3.67,1.17s-2.63-.43-3.68-1.17c-.64-.45-1.19-1.01-1.63-1.66-.72-1.05-1.15-2.34-1.15-3.72Zm13.71,4.5c.79-1.31,1.25-2.85,1.25-4.5,0-4.74-3.81-8.6-8.5-8.6s-8.51,3.86-8.51,8.6c0,1.65.46,3.19,1.26,4.5-2.75,1.32-5.1,3.35-6.81,5.88-.92-2.03-1.39-4.24-1.39-6.49,0-8.64,6.93-15.66,15.45-15.66s15.45,7.02,15.45,15.66c0,2.26-.47,4.47-1.39,6.5-1.71-2.54-4.06-4.57-6.81-5.89Z"/>
+                            <path class="cls-1" d="m70,46.57c0-5.81-4.68-10.54-10.42-10.54s-10.42,4.73-10.42,10.54c0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.14.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.37.82.21,1.67.31,2.52.31s1.69-.1,2.51-.31c2.52-.63,4.7-2.18,6.15-4.37.09-.14.18-.28.27-.43l.15-.26.15-.24-.02-.03c.79-1.51,1.21-3.18,1.21-4.9Zm-5.28,6.69c-.13.12-.27.22-.41.31-.25.18-.51.34-.79.48-.16.1-.33.19-.51.26-.45.21-.93.38-1.42.5-1.31.33-2.72.33-4.03,0-.25-.06-.49-.13-.72-.22-.24-.08-.47-.17-.7-.28-.23-.1-.45-.21-.66-.34-.22-.12-.43-.25-.64-.4-.15-.1-.29-.2-.43-.33-.11-.08-.22-.17-.32-.27-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15s-.07-.1-.1-.16c.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-.48.7-1.06,1.32-1.71,1.82Zm-8.38-8.91c0-1.81,1.45-3.29,3.24-3.29s3.24,1.48,3.24,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.38,1.54-2.42,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.14,5.02c-.87-1.09-1.95-1.99-3.17-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.64-2.31,1.54-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.47,2.8Z"/>
+                            <path class="cls-1" d="m10.42,36.03c-5.75,0-10.42,4.73-10.42,10.54,0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.15.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.37.82.21,1.67.31,2.52.31s1.69-.1,2.51-.31c2.52-.63,4.7-2.18,6.15-4.37.09-.14.18-.29.27-.43l.15-.26.14-.24v-.02c.78-1.51,1.2-3.19,1.2-4.91,0-5.81-4.68-10.54-10.42-10.54Zm5.14,17.23c-.13.12-.27.22-.41.31-.25.18-.51.34-.79.48-.16.1-.33.19-.51.26-.45.21-.93.38-1.42.5-1.31.33-2.72.33-4.03,0-.25-.06-.49-.13-.72-.22-.24-.08-.47-.17-.7-.28-.23-.1-.45-.21-.66-.34-.22-.12-.43-.25-.64-.4-.15-.1-.29-.2-.43-.33-.11-.08-.22-.17-.32-.27-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15-.04-.05-.07-.1-.1-.16.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-.48.7-1.06,1.32-1.71,1.82Zm-8.38-8.91c0-1.81,1.45-3.29,3.24-3.29s3.23,1.48,3.23,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.37,1.54-2.41,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.14,5.02c-.87-1.09-1.95-1.99-3.17-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.64-2.31,1.54-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.47,2.8Z"/>
+                            <path class="cls-1" d="m35,48.92c-5.75,0-10.42,4.73-10.42,10.54,0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.14.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.38.82.2,1.67.3,2.52.3s1.69-.1,2.51-.3c2.52-.64,4.7-2.19,6.15-4.38.09-.14.19-.29.27-.43l.15-.26.14-.24v-.02c.78-1.51,1.2-3.19,1.2-4.91,0-5.81-4.68-10.54-10.42-10.54Zm2.75,18.56c-.24.09-.49.17-.74.23-1.31.33-2.72.33-4.03,0-1.29-.33-2.48-.96-3.47-1.85-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15-.04-.05-.07-.11-.1-.16.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-1.01,1.48-2.45,2.57-4.1,3.15Zm-5.99-10.24c0-1.81,1.45-3.29,3.24-3.29s3.23,1.48,3.23,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.37,1.54-2.41,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.13,5.02c-.86-1.09-1.94-1.99-3.16-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.65-2.31,1.55-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.48,2.8Z"/>
+                            <rect class="cls-1" x="33.97" y="37.75" width="2.05" height="6.12"/>
+                            <rect class="cls-1" x="15.86" y="33.04" width="6.08" height="2.05" transform="translate(-18.62 23.58) rotate(-45.36)"/>
+                            <rect class="cls-1" x="50.12" y="30.99" width="2.05" height="6.08" transform="translate(-9.16 45.75) rotate(-44.64)"/>
+                            </svg>
+                        <div class="txtitem">
+                            <p>アフィリエイト</p>
+                            <p>プログラムはこちら</p>
+                        </div>
+                    </button>
+                    <button type="button" class="iframe-box">
+                        <img src="../images/icon/GC-icon.png">
+                    </button>
+                    <button type="button" class="twitter" onclick="window.location.href='//twitter.com/AU8_Japan'"></button>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="filter">
+        <!--遊戲投注彈窗-->
+        <div class="jumpWindow betWindow sportGame">
+            <div class="title">
+                <p>クイック振替</p>
+                <svg class="close_ic" xmlns="http://www.w3.org/2000/svg" id="popup" viewBox="0 0 26 26">
+                    <circle class="cls-2" cx="13" cy="13" r="13"/>
+                    <circle class="cls-1" cx="13" cy="13" r="12"/>
+                    <g>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                    </g>
+                  </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+            </div>
+            <form>
+                <div class="row">
+                    <p>プラットホーム</p>
+                    <div class="smallTitle">36588 SPORTS</div>
+                </div>
+                <div class="row">
+                    <p>メインウォレット</p>
+                    <input type="text" value="$9999" readonly>
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>36588 SPORTS</p>
+                    <input type="text" value="$0" readonly>
+                </div>
+                <div class="row">
+                    <p>振替金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button type="button">¥100</button>
+                        <button type="button">¥500</button>
+                        <button type="button">¥1000</button>
+                        <button type="button">¥3000</button>
+                        <button type="button">¥5000</button>
+                        <button type="button">¥10000</button>
+                        <button type="button">全て</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button type="button" class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button type="button">ゲームに入る</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow liveGame">
+            <div class="title">
+                <p>クイック振替</p>
+                <svg class="close_ic" xmlns="http://www.w3.org/2000/svg" id="popup" viewBox="0 0 26 26">
+                    <circle class="cls-2" cx="13" cy="13" r="13"/>
+                    <circle class="cls-1" cx="13" cy="13" r="12"/>
+                    <g>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                    </g>
+                  </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+            </div>
+            <form>
+                <div class="row">
+                    <p>プラットホーム</p>
+                    <div class="smallTitle">AG CASINO</div>
+                </div>
+                <div class="row">
+                    <p>メインウォレット</p>
+                    <input type="text" value="$9999" readonly>
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>AG CASINO</p>
+                    <input type="text" value="$0" readonly>
+                </div>
+                <div class="row">
+                    <p>振替金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button type="button">¥100</button>
+                        <button type="button">¥500</button>
+                        <button type="button">¥1000</button>
+                        <button type="button">¥3000</button>
+                        <button type="button">¥5000</button>
+                        <button type="button">¥10000</button>
+                        <button type="button">全て</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button type="button" class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button type="button">ゲームに入る</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow boardGame">
+            <div class="title">
+                <p>クイック振替</p>
+                <svg class="close_ic" xmlns="http://www.w3.org/2000/svg" id="popup" viewBox="0 0 26 26">
+                    <circle class="cls-2" cx="13" cy="13" r="13"/>
+                    <circle class="cls-1" cx="13" cy="13" r="12"/>
+                    <g>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                    </g>
+                  </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+            </div>
+            <form>
+                <div class="row">
+                    <p>プラットホーム</p>
+                    <div class="smallTitle">HABANERO</div>
+                </div>
+                <div class="row">
+                    <p>メインウォレット</p>
+                    <input type="text" value="$9999" readonly>
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>HABANERO</p>
+                    <input type="text" value="$0" readonly>
+                </div>
+                <div class="row">
+                    <p>振替金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button type="button">¥100</button>
+                        <button type="button">¥500</button>
+                        <button type="button">¥1000</button>
+                        <button type="button">¥3000</button>
+                        <button type="button">¥5000</button>
+                        <button type="button">¥10000</button>
+                        <button type="button">全て</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button type="button" class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button type="button">ゲームに入る</button>
+            </div>
+        </div>
+        <!--最新公告-->
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <svg class="close_ic" xmlns="http://www.w3.org/2000/svg" id="popup" viewBox="0 0 26 26">
+                    <circle class="cls-2" cx="13" cy="13" r="13"/>
+                    <circle class="cls-1" cx="13" cy="13" r="12"/>
+                    <g>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                    </g>
+                  </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+            </div>
+            <!--頁籤-->
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">ノーマル</li>
+                <li class="deposit">入金</li>
+            </ul>
+            <!--內容-->
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">人気ゲーム-日本麻雀</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">FORTUNAへようこそ!</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">プロモーション~ライブカジノリベートボーナス</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">プロモーション~スロットリベートボーナス</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

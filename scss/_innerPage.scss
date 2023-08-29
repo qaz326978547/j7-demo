@@ -1,0 +1,4051 @@
+.innerPage {
+    padding: 16px 0 40px;
+    background: $MainBG_1;
+
+    .center {
+        width: 1280px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+
+        
+        //左列
+        .innerSide {
+            width: 250px;
+            height: auto;
+            min-height: 1100px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            margin-right: 30px;
+
+            .levelBox {
+                width: 100%;
+                height: 650px;
+
+                .userInfo {
+                    width: 100%;
+                    height: auto;
+                    padding: 20px 0 10px;
+                    display: flex;
+                    justify-content: center;
+
+                    div {
+                        width: 210px;
+                        height: auto;
+
+                        .account {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+
+                            .lv {
+                                width: 60px;
+                                height: 60px;
+                                margin-right: 15px;
+                            }
+
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $fontColor_2;
+                                display: flex;
+                                flex-direction: column;
+                                flex-shrink: 0;
+
+                                .levels {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    color: $fontColor_2;
+                                    margin: 10px 0 0 0;
+                                    transform: translateX(-3px);
+                                }
+                            }
+                        }
+
+                        .quickSelect {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: center;
+                            padding: 15px 0 10px;
+
+                            li {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 10px;
+                                background: $mainColor_3; //#ffffff;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                padding: 3px;
+                                margin: 0 20px 0 0;
+
+                                &:last-child {
+                                    margin: 0;
+                                }
+
+                                p {
+                                    text-align: center;
+
+                                    &:last-child {
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        color: $fontColor_4;
+                                        transform: scale(0.8);
+                                        margin: 3px 0 0 0;
+                                    }
+                                }
+
+                                svg {
+                                    width: 28px;
+                                    height: 28px;
+                                    
+                                    .cls-1 {
+                                        fill: $mainColor_0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .userStatus {
+                            width: 100%;
+                            height: 40px;
+                            background: $SubBG_2; //#00000015
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0 10px;
+
+                            svg  {
+                                width: 26px;
+                                height: 26px;
+
+                                &:nth-of-type(2) {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+
+                                .cls-1 {
+                                    fill: $mainColor_3;
+                                }
+                            }
+
+                            p {
+                                font-size: 14px;
+                                color: $mainColor_3;
+                                @include textHidden;
+                            }
+                        }
+                    }
+                }
+
+                .innerNav {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        cursor: pointer;
+                        padding: 0 0 0 22px;
+
+                        &:hover,
+                        &:active,
+                        &.active {
+                            background: $SubBG_1; //#ffffff34
+
+                            &::before {
+                                opacity: 0.3;
+                            }
+                        }
+
+                        p {
+                            @include textStyle_1;
+                            font-size: 16px;
+                            position: relative;
+
+                            .warning {
+                                width: 6px;
+                                height: 6px;
+                                border-radius: 30px;
+                                background: $remind_sp; //#ff0000
+                                position: absolute;
+                                top: 0px;
+                                left: 68px;
+                            }
+                        }
+
+                        &::before {
+                            content: "";
+                            width: 3px;
+                            height: 100%;
+                            background: $mainColor_3; //#ffffff
+                            opacity: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 0px;
+                            transform: translateY(-50%);
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            border-style: solid;
+                            border-width: 1px 1px 0px 0px;
+                            border-color: $mainColor_3; //#ffffff
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+                    }
+                }
+            }
+
+            .helpList {
+                width: 100%;
+                height: auto;
+                padding: 20px 0 0 0;
+
+                &>p {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $fontColor_4 ;
+                    text-align: center;
+                    padding: 0 0 10px 0;
+                }
+
+                .content {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: 90px;
+                        @include helpList_Style;
+                    }
+                }
+            }
+        }
+
+        //右部
+        .rightSide {
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1100px;
+            @include blockBG_Style;
+
+            .container {
+                width: 100%;
+                height: auto;
+
+                .content {  //共用樣式
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 40px 30px;
+
+                    .title {  //頁面標題
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: $mainColor_4;
+                        padding: 6px 0 30px 0;
+                        text-align: center;
+                    }
+
+                    h3 { //導圓角有底色標
+                        width: 100%;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: $MainBG_2;
+                        border-radius: 50px;
+                        color: $fontColor_4;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-align: center;
+                        margin: 10px 0;
+                        cursor: default;
+
+                        &.main {
+                            background: $linear_1;
+                            color: $fontColor_2;
+                        }
+                    }
+
+                    p {  //通用字
+                        color: $fontColor_4;
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 24px;
+
+                        &.minTitle {  //主色小標
+                            color: $fontColor_0;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .part {  //段落文字
+                        margin-bottom: 40px;
+
+                        &:nth-last-child(1) {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            margin-bottom: 5px;
+
+                            &.minTitle {
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+
+                    .statusBar {
+                        width: 100%;
+                        height: auto;
+
+                        >.center {
+                            width: 800px;
+                            height: auto;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 0 auto;
+
+                            .wallet {
+                                width: 220px;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                li {
+                                    width: auto;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    svg {
+                                        width: 60px;
+                                        height: 56px;
+
+                                        .cls-1 {
+                                            fill: $fontColor_0;
+                                        }
+                                    }
+
+                                    p {
+                                        max-width: 143px;
+                                        font-size: 20px;
+                                        color: $fontColor_4;
+                                        margin-left: 25px;
+                                        @include textHidden;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+
+                            .reset {
+                                width: auto;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background: none;
+
+                                svg {
+                                    width: 30px;
+                                    height: 25px;
+
+                                    .cls-1 {
+                                        fill: $fontColor_0;
+                                    }
+                                }
+                            }
+
+                            .toReturn {  //轉提 全額退點
+                                width: 460px;
+                                height: 40px;
+                                background: $linear_2 ;
+                                border-radius: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                >p {
+                                    font-size: 15px;
+                                    color: $fontColor_2 ;
+                                }
+
+                                >svg {
+                                    width: 25px;
+                                    height: 20px;
+                                    margin: 0 10px 0 0;
+
+                                    
+                                    .cls-1 {
+                                        fill: $fontColor_2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //切換類別按鈕
+                    .buttonGroup {
+                        display: flex;
+                        justify-content: center;
+                        margin: 5px auto;
+
+                        button {
+                            width: 220px;
+                            height: 30px;
+                            @include btnStyle_4;
+                            color: $fontColor_4;
+                            font-weight: bold;
+                            margin: 0 10px;
+                            font-size: 14px;
+                        }
+                    }
+                    // 日期
+                    .dateGroup {
+                        width: 940px;
+                        height: 120px;
+                        background: $SubBG_5;
+                        border-radius: 15px;
+                        margin: 30px 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .dateItem {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 10px;
+
+                            p {
+                                color: $fontColor_4;
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+    
+                            label {
+                                width: auto;
+                                height: auto;
+                                margin: 0 27px 0 17px;
+                                display: flex;
+                                position: relative;
+    
+                                input {
+                                    @include inputStyle_0;
+                                    width: 300px;
+                                    height: 45px;
+    
+                                    &::placeholder {
+                                        color: $fontColor_4;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                }
+    
+                                button {
+                                    width: auto;
+                                    height: auto;
+                                    background: transparent;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-45%);
+                                    right: 20px;
+
+                                    svg {
+                                        width: 22px;
+                                        height: 22px;
+
+                                        .cls-1 {
+                                            fill: $mainColor_0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dateBtn {
+                                display: flex;
+    
+                                button {
+                                    width: 60px;
+                                    height: 30px;
+                                    @include btnStyle_4;
+                                    color: $fontColor_4;
+                                    font-weight: bold;
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            .searchBtn {
+                                width: 100px;
+                                height: 40px;
+                                @include btnStyle_2;
+                                margin-left: 40px;
+                                font-size: 15px;
+                            }
+                        }
+
+                        p {
+                            font-size: 12px;
+                            text-align: center;
+                            color: $fontColor_4;
+                        }
+
+                    }
+
+                    .submit_btn {  //提交按鈕
+                        height: auto;
+                        @include btnStyle_3;
+                        margin: 5px auto 0;
+                    }
+
+                    .chkBtn {  //確認按鈕
+                        width: 150px;
+                        height: 40px;
+                        @include btnStyle_2;
+
+                        >p {
+                            font-size: 15px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                //會員
+                &.member {
+
+                    .userList {
+                        width: 100%;
+                        height: auto;
+                        padding: 0 0 20px 0;
+
+                        .center {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+
+                            .account {
+                                width: auto;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                margin: 0 60px 0 0;
+
+                                .lv {
+                                    width: 90px;
+                                    height: 90px;
+                                }
+
+                                .status {
+                                    width: auto;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    padding: 0 0 0 28px;
+
+                                    p {
+                                        font-size: 16px;
+                                        color: $fontColor_4;
+                                        margin: 0 0 10px 0;
+
+                                        span {
+                                            font-size: 16px;
+                                            font-family: sans-serif;
+                                            color: $fontColor_4;
+                                            padding: 0 0 0 10px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .wallet {
+                                width: 220px;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                li {
+                                    width: auto;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    &:nth-of-type(1) {
+                                        margin: 0 20px 0 0;
+                                    }
+                                    &:nth-of-type(2) {
+                                        margin: 0 10px 0 0;
+                                    }
+
+                                    svg {
+                                        width: 60px;
+                                        height: 56px;
+
+                                        .cls-1 {
+                                            fill: $fontColor_0;
+                                        }
+                                    }
+
+                                    p {
+                                        max-width: 100px;
+                                        font-size: 20px;
+                                        color: $fontColor_4;
+                                        @include textHidden;
+                                        cursor: default;
+                                    }
+
+                                    &:last-child {
+
+                                        p {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+
+                                .reset {
+                                    width: auto;
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background: none;
+                                    margin: 0 0 0 20px;
+    
+                                    svg {
+                                        width: 30px;
+                                        height: 25px;
+    
+                                        .cls-1 {
+                                            fill: $fontColor_0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .quickSelect {
+                        width: 100%;
+                        height: auto;
+                        padding: 30px 70px 30px;
+
+                        ul {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            li {
+                                width: 250px;
+                                height: 90px;
+                                @include helpList_Style;
+                                padding: 0 0 0 18px;
+                                cursor: pointer;
+                                position: relative;
+
+                                a {
+                                    width: 100%;
+                                    height: 100%;
+                                    text-decoration: none;
+                                    display: flex;
+                                    align-items: center;
+
+                                    p {
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                &::after {
+                                    content: "";
+                                    width: 13px;
+                                    height: 13px;
+                                    border-style: solid;
+                                    border-width: 2px 2px 0 0;
+                                    border-color: $Border_4 ;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 13px;
+                                    transform: translateY(-50%) rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+
+                    .formWrap {
+                        width: 100%;
+                        height: auto;
+
+                        .both {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+
+                            
+
+                            li {
+                                width: 50%;
+                                height: auto;
+
+                                .title {
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                    color: #000000;
+                                    text-align: center;
+                                    padding: 6px 0 45px 0;
+                                    cursor: default;
+                                }
+
+                                &.right {
+
+                                    &>.title {
+
+                                        &:nth-of-type(2) {
+                                            padding: 6px 0 15px 0;
+                                        }
+                                    }
+                                }
+
+                                form {
+                                    width: 100%;
+                                    height: auto;
+
+                                    ul {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        flex-direction: column;
+
+                                        li {
+                                            width: 100%;
+                                            height: auto;
+                                            margin: 0 0 20px 0;
+
+                                            label {
+                                                width: 100%;
+                                                height: auto;
+                                                display: flex;
+                                                justify-content: flex-end;
+                                                align-items: center;
+
+                                                >p {
+                                                    font-size: 14px;
+                                                    color: $fontColor_1;
+                                                    margin: 0 20px 0 0;
+                                                }
+
+                                                >input {
+                                                    width: 300px;
+                                                    height: 45px;
+                                                   @include inputStyle_1;
+
+                                                   &::placeholder {
+                                                        color: $fontColor_4;
+                                                   }
+                                                }
+
+                                                .btnInput {
+                                                    width: 300px;
+                                                    height: auto;
+                                                    @include inputStyle_1;
+                                                    display: flex;
+                                                    align-items: center;
+
+                                                    input {
+                                                        width: 100%;
+                                                        height: 45px;
+                                                        border: none;
+                                                        background: none;
+                                                    }
+
+                                                    .chgBtn {
+                                                        width: 40px;
+                                                        height: 23px;
+                                                        @include btnStyle_0;
+                                                        padding: 5px 20px 6px;
+
+                                                        >p {
+                                                            font-size: 12px;
+                                                            transform: scale(0.9);
+                                                            white-space: nowrap;
+                                                        }
+                                                    }
+                                                }
+
+                                                .qrBox {
+                                                    width: 300px;
+                                                    height: auto;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+
+                                                    >i {
+                                                        width: 110px;
+                                                        height: 110px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                .safe {
+
+                                    >article {
+                                        width: 100%;
+                                        height: auto;
+                                        font-size: 14px;
+                                        color: $fontColor_4;
+                                        padding: 0 0 30px 40px;
+
+                                        >p {
+                                            font-size: 14px;
+                                            color: $fontColor_12;
+                                            text-align: center;
+                                            padding: 0 0 10px 0;
+
+                                            &.text {
+                                                color: $fontColor_3;
+                                            }
+
+                                            >span {
+                                                color: $fontColor_8;
+                                            }
+                                        }
+                                    }
+
+                                    >ul {
+                                        width: 100%;
+                                        height: auto;
+                                        display: grid;
+                                        grid-template-columns: repeat(2, 1fr);
+                                        gap: 10px 0;
+                                        padding: 0 0 0 40px;
+
+
+                                        li {
+                                            width: 100%;
+                                            height: 40px;
+                                            padding: 0 0 0 30px;
+
+                                            a {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                align-items: center;
+                                                text-decoration: none;
+
+                                                svg {
+                                                    width: 36px;
+                                                    height: 36px;
+                                                    margin-right: 10px;
+
+                                                    .cls-1 {
+                                                        fill: $Border_8;
+                                                    }
+                                                
+                                                    .cls-2 {
+                                                        fill: $mainColor_3;
+                                                    }
+
+                                                   
+                                                }
+
+                                                >p {
+                                                    font-size: 12px;
+                                                    color: $fontColor_4;
+                                                }
+
+                                                &:hover,
+                                                &:active,
+                                                &.active {
+
+                                                    svg {
+
+                                                        .cls-1 {
+                                                            fill: $fontColor_6;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .remind {
+                            font-size: 14px;
+                            color: $fontColor_4;
+                            padding: 50px 0 0;
+
+                            >span {
+                                color: $remind_sp;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                //depositPage 入金
+                &.depositPage {
+
+                    .content {
+
+                        p:not(.title) {
+                            font-size: 14px;
+                        }
+                     
+                        .swiper-selectBox {
+                            width: 100%;
+                            overflow: hidden;
+                            position: relative;
+                            margin: 0 auto;
+                            padding: 0 0 30px 0;
+
+                            .swiper-wrapper {
+                                width: auto;
+
+                                .swiper-slide {
+                                    width: 250px;
+                                    height: 90px;
+                                    @include helpList_Style;
+                                    margin-right: 10px;
+                                    position: relative;
+        
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+
+                                    p {
+                                        white-space: nowrap;
+                                    }
+        
+                                    svg {
+                                        width: 70px;
+                                        height: 70px;
+                                    }
+        
+                                    &::after {
+                                        content: "";
+                                        width: 10px;
+                                        height: 10px;
+                                        border-style: solid;
+                                        border-width: 2px 2px 0 0;
+                                        border-color: $Border_7;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 15px;
+                                        -webkit-transform: translateY(-50%) rotate(45deg);
+                                        transform: translateY(-80%) rotate(45deg);
+                                    }
+                                }
+                            }
+                        }
+
+                        // 各別
+                        .bankGroup {
+                            display: none;
+
+                            &.display {
+                                display: block;
+                            }
+
+                            &.trans_a {
+
+                                .bankSelect {
+                                    width: 100%;
+                                }
+                            }
+
+                            form {
+                                width: 760px;
+                                height: auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                padding: 25px 0 0 30px;
+
+                                &>p {
+                                    font-size: 14px;
+                                    color: $fontColor_4;
+                                }
+
+                                label {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 20px 0;
+                                    position: relative;
+
+                                    &.payType {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        position: relative;
+
+                                        &::after {
+                                            content: "";
+                                            width: 13px;
+                                            height: 13px;
+                                            border-style: solid;
+                                            border-width: 2px 2px 0 0;
+                                            border-color: #CCCCCC;
+                                            position: absolute;
+                                            top: 40%;
+                                            right: 20px;
+                                            -webkit-transform: translateY(-50%) rotate(135deg);
+                                            transform: translateY(-50%) rotate(135deg);
+                                        }
+
+                                        select {
+                                            width: 500px;
+                                            height: 45px;
+                                            @include inputStyle_1;
+                                            appearance: none;
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    >p {
+                                        padding: 0 20px 0 0;
+                                    }
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+
+                                    &::placeholder {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+
+                                    input {
+                                        width: 500px;
+                                        height: 45px;
+                                        @include inputStyle_1;
+                                        font-size: 14px;
+
+                                        &::placeholder {
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    .btnInput {
+                                        width: 500px;
+                                        height: 45px;
+                                        @include inputStyle_1;
+                                        padding: 0 20px 0 0;
+                                        display: flex;
+                                        align-items: center;
+                                        padding-right: 15px;
+
+                                        &>.area {
+                                            width: 95px;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-shrink: 0;
+                                            border-right: solid 2px $Border_1;
+                                            border-radius: 0;
+                                            font-size: 20px;
+                                            font-weight: bold;
+                                            color: $remind_sp;
+                                            text-align: center;
+
+                                            &::placeholder {
+                                                font-size: 20px;
+                                                font-weight: bold;
+                                                color: $remind_sp;
+                                                text-align: center;
+                                            }
+                                        }
+
+                                        input {
+                                            width: 100%;
+                                            height: 100%;
+                                            border: none;
+                                        }
+
+                                        .chgBtn {
+                                            @include btnStyle_0;
+                                            
+                                            p {
+                                                font-size: 12px;
+                                                transform: scale(0.9);
+                                                white-space: nowrap;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                article {
+                                    width: 500px;
+                                    height: auto;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                    color: $fontColor_4;
+                                    line-height: 15px;
+                                    padding: 0 0 20px 0;
+                                    cursor: default;
+                                }
+
+                                .textBox {
+                                    width: 500px;
+                                    height: auto;
+
+                                    .text {
+                                        width: 350px;
+                                        height: 20px;
+                                        background: $remind_sp;
+                                        border-radius: 50px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin: 0 auto 15px;
+
+                                        p {
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            color: $fontColor_2;
+                                        }
+                                    }
+
+                                    .limit {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin: 0 0 15px 0;
+
+                                        p {
+                                            font-size: 14px;
+                                            color: $fontColor_4;
+                                        }
+
+                                        span {
+                                            color: $remind_sp;
+                                        }
+
+                                        .row {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+
+                                            .one {
+                                                width: 120px;
+                                            }
+
+                                            .two {
+                                                padding-left: 5px;
+                                            }
+
+                                            .three {
+                                                padding-left: 5px;
+                                            }
+                                        }
+                                    }
+
+                                    .calc {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin: 0 0 15px 0;
+
+                                        p {
+                                            font-size: 16px;
+                                            color: $fontColor_4;
+                                        }
+
+                                        span {
+                                            color: $fontColor_11;
+                                        }
+
+                                        .row {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+
+                                            .one {
+                                                width: 280px;
+                                                font-size: 16px;
+                                            }
+
+                                            .two {
+                                                padding-left: 5px;
+                                            }
+
+                                            .three {
+                                                padding-left: 5px;
+                                            }
+                                        }
+                                    }
+
+                                    .applyBtn {
+                                        width: 200px;
+                                        height: 34px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        @include btnStyle_3;
+                                        margin: 0 0 0 75px;
+                                    }
+                                }
+                            }
+
+                            .bankSelect {
+                                width: 760px;
+                                height: auto;
+                                padding: 0 0 0 30px;
+
+                                &>p {
+                                    font-size: 14px;
+                                    color: $fontColor_4;
+                                    cursor: default;
+                                }
+
+                                ul {
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 0 0 20px 0;
+
+                                    >p {
+                                        padding: 0 0 20px 0;
+                                        cursor: default;
+
+                                        span {
+                                            color: $remind_sp;
+                                            font-weight: bold;
+                                            text-decoration: underline;
+                                            cursor: default;
+                                        }
+                                    }
+
+                                    &:first-child {
+                                        list-style-type: auto;
+
+                                        li {
+                                            &::marker {
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                color: $fontColor_4;
+                                            }
+                                        }
+                                    }
+
+                                    li {
+                                        width: 90%;
+                                        margin: 0 auto;
+                                    }
+
+                                }
+
+                                &>label {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    position: relative;
+
+                                    &>p {
+                                        padding: 0 20px 0 0;
+                                        margin-right: 0;
+                                        cursor: default;
+                                    }
+
+                                    select {
+                                        width: 500px;
+                                        height: 45px;
+                                        @include inputStyle_1;
+                                        font-size: 14px;
+                                        appearance: none;
+                                    }
+
+                                    &::after {
+                                        content: "";
+                                        width: 13px;
+                                        height: 13px;
+                                        border-style: solid;
+                                        border-width: 2px 2px 0 0;
+                                        border-color: $Border_1;
+                                        position: absolute;
+                                        top: 40%;
+                                        right: 20px;
+                                        transform: translateY(-50%) rotate(135deg);
+                                    }
+                                }
+                            }
+
+                            .noticeBox {
+                                width: 100%;
+                                height: auto;
+
+                                &>.part{
+                                    margin-bottom: 15px;
+
+                                    p {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        cursor: default;
+                                    }
+                                }
+
+                                span {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    color: $fontColor_8;
+                                }
+
+                                &>ul {
+                                    width: 100%;
+                                    height: auto;
+                                    font-size: 14px;
+                                    color: $fontColor_4;
+                                    font-weight: bold;
+                                    margin: 0 0 20px 0;
+                                    cursor: default;
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+
+                                    &>p {
+                                        color: $fontColor_0;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+
+                            nav {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding: 10px 0;
+
+                                >p {
+                                    font-size: 14px;
+                                    color: $fontColor_4;
+                                    line-height: 17px;
+                                    cursor: default;
+                                }
+                            }
+
+                            h6 {
+                                font-size: 12px;
+                                font-weight: bold;
+                                color: $fontColor_4;
+                                padding-bottom: 30px;
+                            }
+
+                            h2 {
+                                width: 100%;
+                                height: 40px;
+                                background: $mainColor_5;
+                                border-radius: 50px;
+                                font-size: 20px;
+                                color: $fontColor_1;
+                                font-weight: bold;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin: 40px 0 20px 0;
+                            }
+
+                            &.usdt_c,
+                            &.sticpay_c,
+                            &.iwalletPay_c,
+                            &.TigerPay_c {
+                                form {
+                                    p {
+                                        color: $fontColor_8;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //transfer 轉帳
+                &.transferPage {
+
+                    .statusBar {
+                        width: 100%;
+                        height: auto;
+
+                        >.center {
+                            width: 800px;
+                            height: auto;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 0 auto;
+
+                            .wallet {
+                                width: 220px;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                li {
+                                    width: auto;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    svg {
+                                        width: 60px;
+                                        height: 56px;
+
+                                        .cls-1 {
+                                            fill: $fontColor_0;
+                                        }
+                                    }
+
+                                    p {
+                                        max-width: 143px;
+                                        font-size: 20px;
+                                        color: $fontColor_4;
+                                        margin-left: 25px;
+                                        @include textHidden;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+
+                            .reset {
+                                width: auto;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background: none;
+
+                                svg {
+                                    width: 30px;
+                                    height: 25px;
+
+                                    .cls-1 {
+                                        fill: $fontColor_0;
+                                    }
+                                }
+                            }
+
+                            .toReturn {
+                                width: 460px;
+                                height: 40px;
+                                background: $linear_2 ;
+                                border-radius: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                >p {
+                                    font-size: 15px;
+                                    color: $fontColor_2 ;
+                                }
+
+                                >svg {
+                                    width: 25px;
+                                    height: 20px;
+                                    margin: 0 10px 0 0;
+
+                                    
+                                    .cls-1 {
+                                        fill: $fontColor_2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contentWrap {
+                        width: 100%;
+                        height: auto;
+
+                        h3 {
+                            width: 100%;
+                            height: 36px;
+                            margin: 40px 0 20px 0;
+                        }
+
+                        .platform_List {
+                            width: auto;
+                            height: 710px;
+                            display: grid;
+                            grid-template-columns:repeat(4, 1fr);
+                            gap: 8px;
+                            overflow: hidden;
+                            margin: 0 0 20px 0;
+
+                            &.display {
+                                height: auto;
+                            }
+
+                            li {
+                                width: 230px;
+                                height: 80px;
+                                background: $SubBG_4;
+                                border-radius: 10px;
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+
+                                .gameName {
+                                    font-size: 14px;
+                                    color: $fontColor_4;
+                                    padding: 0 0 15px 0;
+                                }
+
+                                .gameBalance {
+                                    width: 120px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    >p {
+                                        font-size: 20px;
+                                        color: $fontColor_4;
+                                        @include textHidden;
+                                    }
+
+                                    span {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: $fontColor_4;
+                                        flex-shrink: 0;
+                                    }
+                                }
+
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                    position: absolute;
+                                    right: 15px;
+                                    bottom: 10px;
+                                    cursor: pointer;
+
+                                    .cls-1 {
+                                        fill: $fontColor_4;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .expandBtn {
+                            width: 360px;
+                            height: 40px;
+                            display: block;
+                            border-radius: 50px;
+                            margin: 0 auto;
+
+                            p {
+                                font-size: 12px;
+                                color: $fontColor_4;
+                            }
+
+                            &:hover,
+                            &:active,
+                            &.active {
+                                background: $mainColor_3;
+                                border: solid 1px $Border_5;
+                            }
+                        }
+
+                        .transferBox {
+                            width: 100%;
+                            height: 270px;
+                            background: $mainColor_5;
+                            border-radius: 20px;
+                            padding: 25px 80px;
+
+                            form {
+                                width: auto;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                p {
+                                    font-size: 14px;
+                                }
+
+                                >div {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+
+                                    svg {
+                                        width: 30px;
+                                        height: 22px;
+
+                                        .cls-1 {
+                                            fill: $mainColor_7;
+                                        }
+                                    }
+
+                                    label {
+                                        width: auto;
+                                        height: auto;
+                                        position: relative;
+
+                                        select {
+                                            appearance: none;
+                                            width: 300px;
+                                            height: 45px;
+                                            @include inputStyle_1;
+                                            color: $fontColor_4;
+                                            font-size: 14px;
+                                            position: relative;
+                                            cursor: pointer;
+                                        }
+
+                                        &::after {
+                                            content: "";
+                                            width: 11px;
+                                            height: 11px;
+                                            border-style: solid;
+                                            border-width: 0 2px 2px 0;
+                                            border-color: $Border_11;
+                                            pointer-events: none;
+                                            position: absolute;
+                                            top: 45%;
+                                            right: 20px;
+                                            transform: translateY(-50%) rotate(45deg);
+                                        }
+                                    }
+                                }
+
+                                >label {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: center;
+
+                                    >p {
+                                        padding: 0 20px 0 0;
+                                    }
+
+                                    input {
+                                        width: 300px;
+                                        height: 42px;
+                                        @include inputStyle_1;
+                                        color: $fontColor_4;
+                                        font-size: 14px;
+
+                                        &::placeholder {
+                                            color: $fontColor_4;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+
+                                >ul {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+
+                                    li {
+                                        width: 100px;
+                                        height: 30px;
+                                        border: solid 1px $Border_1;
+                                        border-radius: 5px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background: $mainColor_3;
+                                        margin: 0 10px 0 0;
+                                        cursor: pointer;
+
+                                        &:last-child {
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                //withdrawal 出金
+                &.withdrawPage {
+
+                    .limitWrap {
+                        width: 80%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 30px auto 20px;
+
+                        li {
+                            width: 400px;
+                            height: 50px;
+                            @include inputStyle_0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-right: 30px;
+
+                            &:last-child {
+                                margin:  0 0 0 0;
+                            }
+                            
+                            p,
+                            span {
+                                color: $fontColor_4;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .contentWrap {
+                        width: 100%;
+                        height: auto;
+                        margin: 0 0 30px;
+
+                        .platform_List {
+                            width: auto;
+                            height: 710px;
+                            display: grid;
+                            grid-template-columns:repeat(4, 1fr);
+                            gap: 8px;
+                            padding: 10px 0 0 0;
+                            overflow: hidden;
+                            margin: 0 0 20px 0;
+
+                            &.display {
+                                height: auto;
+                            }
+
+                            li {
+                                width: 230px;
+                                height: 80px;
+                                background: $SubBG_4;
+                                border-radius: 10px;
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+
+                                .gameName {
+                                    font-size: 14px;
+                                    color: $fontColor_4;
+                                    padding: 0 0 15px 0;
+                                }
+
+                                .gameBalance {
+                                    width: 140px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    >p {
+                                        font-size: 20px;
+                                        color: $fontColor_4;
+                                        @include textHidden;
+                                    }
+
+                                    span {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: $fontColor_4;
+                                        flex-shrink: 0;
+                                        margin-left: 10px;
+                                    }
+                                }
+
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                    position: absolute;
+                                    right: 15px;
+                                    bottom: 10px;
+                                    cursor: pointer;
+
+                                    .cls-1 {
+                                        fill: $fontColor_4;
+                                    }
+                                }
+                            }
+                        }
+
+                        .expandBtn {
+                            width: 360px;
+                            height: 40px;
+                            display: block;
+                            border-radius: 50px;
+                            margin: 0 auto;
+
+                            p {
+                                font-size: 12px;
+                                color: $fontColor_4;
+                            }
+
+                            &:hover,
+                            &:active,
+                            &.active {
+                                background: $mainColor_3;
+                                border: solid 1px $Border_5;
+                            }
+                        }
+
+                        form {
+                            width: auto;
+                            height: auto;
+                            margin: 25px 0 0;
+
+                            .up {
+                                width: 100%;
+                                height: 360px;
+                                background: $mainColor_5;
+                                border-radius: 10px;
+                                padding: 25px;
+                                margin-bottom: 25px;
+
+                                .both {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+
+                                    p {
+                                        font-size: 14px;
+                                    }
+
+                                    >div {
+                                        width: 50%;
+                                        height: auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-end;
+
+                                        label {
+                                            width: auto;
+                                            height: 45px;
+                                            display: flex;
+                                            align-items: center;
+                                            position: relative;
+                                            margin: 0 0 15px 0;
+
+                                            >p {
+                                                padding: 0 20px 0 0;
+                                                white-space: nowrap;
+                                            }
+
+                                            select {
+                                                width: 300px;
+                                                height: 100%;
+                                                @include inputStyle_0;
+                                                color: $fontColor_4;
+                                                font-size: 14px;
+                                                appearance: none;
+                                                position: relative;
+                                                cursor: pointer;
+                                            }
+
+                                            &::after {
+                                                content: "";
+                                                width: 11px;
+                                                height: 11px;
+                                                border-style: solid;
+                                                border-width: 0 2px 2px 0;
+                                                border-color: $Border_11;
+                                                pointer-events: none;
+                                                position: absolute;
+                                                top: 45%;
+                                                right: 20px;
+                                                transform: translateY(-50%) rotate(45deg);
+                                            }
+
+                                            input {
+                                                width: 300px;
+                                                height: 100%;
+                                                @include inputStyle_0;
+                                                color: $fontColor_4;
+                                                font-size: 14px;
+
+                                                &::placeholder {
+                                                    color: $fontColor_4;
+                                                    font-size: 14px;
+                                                }
+                                            }
+
+                                            &:nth-of-type(3) {
+                                                &::after {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+
+                                        >.text {
+                                            width: 300px;
+                                            height: 20px;
+                                            background: $remind_sp;
+                                            border-radius: 50px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin: 0 0 10px 0;
+
+                                            >p {
+                                                font-size: 12px;
+                                                font-weight: bold;
+                                                color: $fontColor_2;
+                                            }
+                                        }
+
+                                        .limit {
+                                            width: 300px;
+                                            height: auto;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            margin: 0 0 15px 0;
+                                        }
+
+                                        ul {
+                                            width: 400px;
+                                            height: auto;
+                                            border-radius: 5px;
+                                            background: $mainColor_8;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            padding: 15px 0;
+
+                                            li {
+                                                width: 100%;
+                                                height: auto;
+                                                display: flex;
+                                                padding: 0 0 0 50px;
+
+                                                .detail {
+                                                    width: 180px;
+                                                    height: auto;
+                                                }
+
+                                                i {
+                                                    padding: 0 10px;
+                                                }
+
+                                                .sum {
+                                                    padding: 0 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+                                }
+
+                                .chkBtn {
+                                    margin: 10px auto 0;
+                                }
+                            }
+
+                            .under {
+                                width: 100%;
+                                height: auto;
+
+                                ul {
+                                    width: 100%;
+                                    height: auto;
+
+                                    li {
+                                        width: 100%;
+                                        height: auto;
+                                        margin: 0 0 30px 0;
+
+                                        &:last-child {
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //kyc
+                &.kycPage {
+
+                    .contentWrap {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px 0;
+
+                        .text {
+                            width: 100%;
+                            height: auto;
+                            margin: 0 15px 0 0;
+
+                            ul {
+                                list-style: unset;
+                                margin: 0 0 25px 0;
+
+                                &:first-child {
+
+                                    li {
+                                        list-style-type: auto;
+                                    }
+                                }
+
+                                &:last-child {
+                                    margin: 0;
+
+                                    li {
+                                        list-style-type: circle !important;
+                                    }
+                                }
+
+                                p {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    padding: 0 0 5px 0;
+                                    line-height: 16px;
+                                    cursor: default;
+                                }
+
+                                li {
+                                    width: 80%;
+                                    height: auto;
+                                    margin: 0 auto;
+                                    cursor: default;
+
+                                    &::marker {
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: $fontColor_4 ;
+                                    }
+                                }
+                            }
+                        }
+
+                        .infoPic {
+                            width: 55%;
+                            height: auto;
+                            flex-shrink: 0;
+
+                            h3 {
+                                font-size: 12px;
+                                padding: 10px 0;
+                                margin: 0 0 10px 0;
+                            }
+                           
+                            img {
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+
+                        &:nth-of-type(3) {
+                            flex-direction: column;
+
+                            div {
+                                width: 100%;
+                                display: flex;
+    
+                                &.up {
+                                    width: 100%;
+                                    height: auto;
+                                    justify-content: space-between;
+                                    margin: 0 0 20px 0;  
+                                    
+                                    .upload {
+                                        width: 48%;
+                                    }
+                                }
+
+                                &.under {
+
+                                    .upload {
+                                        width: 100%;
+                                    }
+                                }
+        
+                                .upload {
+                                    height: auto;
+                                    display: flex;
+                                    flex-direction: column;
+    
+                                    &>p {
+                                        color: $fontColor_4;
+                                        font-size: 16px;
+                                        text-align: center;
+                                        padding: 5px 0;
+                                    }
+    
+                                    .uploadBlock {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: dashed 1px $Border_8;
+                                        border-radius: 10px;
+                                        padding: 30px;
+                                        margin: 0 auto;
+        
+                                        svg {
+                                            width: 60px;
+                                            height: 50px;
+                                            display: block;
+                                            flex-shrink: 0;
+                                        }
+        
+                                        button {
+                                            width: auto;
+                                            height: auto;
+                                            @include btnStyle_2;
+                                            padding: 10px 25px;
+                                            margin: 20px 0 5px 0;
+            
+                                            p {
+                                                font-size: 16px;
+                                                @include textStyle_1;
+                                            }
+
+                                            &:hover,&:active,&.active {
+
+                                                p {
+                                                    color: $mainColor_6;
+                                                    text-shadow: none;
+                                                }
+                                            }
+                                        }
+        
+                                        p {
+                                            font-size: 10px;
+                                            font-weight: bold;
+                                            color: $fontColor_4 ;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //mail
+                &.mailPage {
+
+                    .inboxFilter {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .half {
+                            width: 48%;
+                            height: auto;
+                            background: $SubBG_5;
+                            border-radius: 10px;
+                            padding: 25px;
+
+                            .upTitle {
+                                width: 100%;
+                                color: $fontColor_1;
+                                font-size: 16px;
+                                text-align: center;
+                                margin-bottom: 20px;
+                            }
+
+                            &>ul {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            
+                                li {
+                                    width: auto;
+                                    min-width: 120px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    @include btnStyle_4;
+                                    padding: 5px 15px;
+                                    cursor: pointer;
+
+                                    &:hover,&:active,&.active {
+
+                                        p {
+                                            color: $fontColor_2;
+                                        }
+                                    }
+
+                                    p {
+                                        color: $fontColor_3;
+                                        font-size: 12px;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .functionWrap {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        margin: 30px 0 5px;
+
+                        label {
+                            width: auto;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 30px;
+
+                            input {
+                                width: 15px;
+                                height: 15px;
+                                margin: auto;
+                                border: 1.5px solid $Border_3;
+                                border-radius: 3px;
+                                appearance: none;
+                                position: relative;
+                                margin-right: 10px;
+                                cursor: pointer;
+
+                                &::before {
+                                    content: "✓";
+                                    color: $fontColor_0;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    opacity: 0;
+                                }
+
+                                &:checked {
+
+                                    &::before {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            p {
+                                color: $fontColor_3;
+                                font-size: 12px;
+                            }
+                        }
+
+                        button {
+                            width: 90px;
+                            height: 24px;
+                            border-radius: 30px;
+
+                            &.read {
+                                background: $mainColor_6;
+                                margin-right: 20px;
+                            }
+
+                            &.delete {
+                                background: $remind_sp;
+                            }
+
+                            p {
+                                color: $fontColor_2;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .typeContainer {
+                        display: none;
+                        width: 100%;
+                        height: auto;
+                        margin: 15px 0;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        .smallType {
+                            display: none;
+                            width: 100%;
+                            height: auto;
+
+                            &.display {
+                                display: block;
+                            }
+
+                            li {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin: 0 0 10px;
+
+                                &:last-child {
+                                    margin: 0;
+                                }
+
+                                &.unread {
+
+                                    .mailTitle {
+
+                                        p {
+
+                                            &:nth-of-type(1) {
+
+                                                &::before {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            
+                                label {
+                                    width: 5%;
+                                    height: auto;
+                                    flex-shrink: 0;
+
+                                    input {
+                                        width: 15px;
+                                        height: 15px;
+                                        margin: auto;
+                                        border: 1.5px solid $Border_3;
+                                        border-radius: 3px;
+                                        appearance: none;
+                                        position: relative;
+                                        cursor: pointer;
+
+                                        &::before {
+                                            content: "✓";
+                                            color: $fontColor_0;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%,-50%);
+                                            opacity: 0;
+                                        }
+
+                                        &:checked {
+
+                                            &::before {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .mailBlock {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    background: $SubBG_3;
+                                    border-radius: 5px;
+                                    padding: 15px;
+
+                                    .mailTitle {
+                                        width: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        position: relative;
+
+                                        &::before {
+                                            content: "";
+                                            width: 100%;
+                                            height: 1px;
+                                            background-image: linear-gradient(to right, $Border_1 0%, $Border_1 50%, transparent 50%);
+                                            background-size: 14px 1px;
+                                            background-repeat: repeat-x;
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                        }
+
+                                        p {
+                                            color: $fontColor_3;
+                                            font-size: 14px;
+                                            position: relative;
+
+                                            &::before {
+                                                content: "未読";
+                                                display: none;
+                                                width: auto;
+                                                height: auto;
+                                                font-size: 10px;
+                                                background: $remind_sp;
+                                                color: $fontColor_2;
+                                                border-radius: 30px;
+                                                padding: 0 7px;
+                                                position: absolute;
+                                                top: 50%;
+                                                right: -40px;
+                                                transform: translateY(-50%) scale(0.8);
+                                            }
+                                        }
+
+                                        .date {
+                                            color: $fontColor_3;
+                                            font-size: 14px;
+                                            font-weight: unset;
+                                            transform: scale(0.85);
+                                        }
+                                    }
+
+                                    .mailContent {
+                                        width: 100%;
+
+                                        p {
+                                            width: 100%;
+                                            max-width: 755px;
+                                            color: $fontColor_3;
+                                            font-size: 12px;
+                                            @include textHidden;
+                                        }
+                                    }
+
+                                    .readMore {
+                                        width: 70px;
+                                        height: 20px;
+                                        flex-shrink: 0;
+                                        @include btnStyle_0;
+                                        margin-left: 30px;
+                                        padding: 0 0 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .countBlock {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;                        
+                        margin: 0 auto;
+
+                        &>p {
+                            display: flex;
+                            align-items: center;
+                            color: $fontColor_3;
+                            font-size: 14px;
+
+                            span {
+                                margin: 0 5px;
+                            }
+                        }
+
+                        &>ul {
+                            width: auto;
+                            display: flex;
+                            align-items: center;
+
+                            li {
+                                width: auto;
+                                border-radius: 5px;
+                                padding: 2px 8px;
+                                margin-right: 5px;
+                                cursor: pointer;
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+
+                                &:hover,&:active,&.active {
+                                    background: $mainColor_0 ;
+
+                                    p {
+                                        color: $fontColor_2;
+                                    }
+                                }
+
+                                p {
+                                    color: $fontColor_3;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            svg {
+                                width: 15px;
+                                height: 15px;
+                                margin-left: 5px;
+                                cursor: pointer;
+
+                                &.prevBtn {
+                                    margin-right: 10px;
+                                    transform: rotate(-180deg);
+                                }
+
+                                .cls-1 {
+                                    fill: $fontColor_3;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //vipPage
+                &.vipPage {
+
+                    .content {
+
+                        .currentStatus {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 10px 0;
+
+                            .half {
+                                width: 100%;
+                                display: flex;
+
+                                &:nth-of-type(1) {
+                                    width: 500px;
+                                    flex-shrink: 0;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px solid $Border_5;
+                                    border-radius: 15px;
+                                    padding: 15px;
+                                    margin-right: 40px;
+
+                                    .level {
+                                        width: 120px;
+                                        height: 120px;
+                                        flex-shrink: 0;
+                                        margin-right: 20px;
+                                    }
+
+                                    ul {
+                                        width: 100%;
+                                        height: auto;
+
+                                        li {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            align-items: center;
+
+                                            &>p {
+                                                width: 205px;
+                                                margin-right: 15px;
+                                                white-space: nowrap;
+                                                flex-shrink: 0;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                position: relative;
+                                                cursor: default;
+
+                                                &::before {
+                                                    content: ":";
+                                                    width: auto;
+                                                    height: auto;
+                                                    color: $fontColor_4;
+                                                    font-size: 14px;
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    right: 0;
+                                                    transform: translateY(-50%);
+                                                }
+                                            }
+
+                                            span {
+                                                width: 100%;
+                                                color: $fontColor_4;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                cursor: default;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(2) {
+                                    flex-direction: column;
+
+                                    .toNext_level {
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    }
+
+                                    .wrap {
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        @include barStyle;
+
+                                        &:nth-last-of-type(1) {
+                                            margin-bottom: 30px;
+                                        }
+
+                                        .infoText {
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            font-size: 16px;
+                                            margin: 20px 0 3px;
+
+                                            span {
+                                                color: $remind_sp;
+                                            }
+                                        }
+
+                                        .barBox {
+                                            width: 100%;
+                                            height: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .swiper_levelList {
+                            width: 100%;
+                            overflow: hidden;
+
+                            .swiper-wrapper {
+                                width: auto;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                padding: 20px 50px 10px 0;
+                                list-style: none;
+
+                                .swiper-slide {
+                                    width: 180px;
+                                    height: 250px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    border: 1px solid $Border_5;
+                                    border-radius: 15px;
+                                    padding: 80px 10px 10px;
+                                    margin-right: 15px;
+                                    position: relative;
+
+                                    .level {
+                                        width: 120px;
+                                        height: 120px;
+                                        position: absolute;
+                                        top: -30px;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+
+                                    .levelName {
+                                        color: $fontColor_4;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        margin: 0 0 5px;
+                                        cursor: default;
+                                    }
+
+                                    .itemName {
+                                        width: 100%;
+                                        height: 22px;
+                                        background: $linear_3;
+                                        border-radius: 30px;
+                                        color: $fontColor_2;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        cursor: default;
+                                    }
+
+                                    .num {
+                                        color: $fontColor_4;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        margin: 10px 0;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+                        }
+
+                        table {
+                            width: 100%;
+                            height: auto;
+                            border-collapse: separate;
+                            border: 1px solid $Border_5;
+                            border-radius: 15px;
+                            margin: 15px 0 30px;
+                            overflow: hidden;
+
+                            tr {
+
+                                th {
+                                    height: 55px;
+                                    background: $SubBG_3;
+                                    border-right: 1px solid $Border_5;
+                                    border-bottom: 1px solid $Border_5;
+                                    vertical-align: middle;
+                                    padding: 0 30px;
+
+                                    &:last-child {
+                                        border-right: 0;
+                                    }
+
+                                    div {
+
+                                        &>span {
+                                            display: block;
+                                            color: $fontColor_3;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            cursor: default;
+                                        }
+                                    }
+
+                                    &>p {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                td {
+                                    height: 55px;
+                                    vertical-align: middle;
+                                    border-right: 1px solid $Border_5;
+                                    border-bottom: 1px solid $Border_5;
+                                    padding: 0 30px;
+
+                                    &:last-child {
+                                        border-right: 0;
+                                    }
+
+                                    p {
+                                        width: 100%;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        cursor: default;
+                                    }
+
+                                    div {
+                                        display: flex;
+                                        align-items: center;
+
+                                        p {
+                                            white-space: nowrap;
+                                            cursor: default;
+                                        }
+
+                                        i {
+                                            width: 40px;
+                                            height: 40px;
+                                            margin: 0 auto;
+                                        }
+                                    }
+                                }
+
+                                &:last-child {
+
+                                    td {
+                                        border-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .part {
+                            margin:  0 0 15px;
+                            cursor: default;
+
+                            &:last-of-type {
+                                margin: 0;
+                            }
+
+                            .minTitle {
+                                margin:  0 0 0;
+                            }
+
+                            span {
+                                color: $remind_sp;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+
+                //4genBonus
+                &.my4genBonus {
+                    
+                    p {
+                        margin-bottom: 10px;
+                    }
+
+                    .infoBlock {
+                        width: 90%;
+                        height: 200px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: $MainBG_2;
+                        border-radius: 20px;
+                        padding: 35px;
+                        margin: 20px auto;
+
+                        .group {
+                            width: 100%;
+                            height: 100%;
+
+                            &:first-child {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 45px;
+
+                                label {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 15px;
+                                    position: relative;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+    
+                                    .itemTitle {
+                                        width: 80px;
+                                        flex-shrink: 0;
+                                        text-align: end;
+                                        margin-right: 45px;
+                                    }
+
+                                    input {
+                                        width: 100%;
+                                        height: 45px;
+                                        @include inputStyle_0;
+                                    }
+    
+                                    .copyBtn {
+                                        width: 40px;
+                                        height: 23px;
+                                        @include btnStyle_0;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 15px;
+                                        transform: translateY(-50%);
+
+                                        p {
+                                            white-space: nowrap;
+                                            transform: scale(0.6);
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                width: 30%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                flex-shrink: 0;
+
+                                p {
+                                    white-space: nowrap;
+                                }
+
+                                img {
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+
+                    .invitePic {
+                        margin: 20px 0;
+                    }
+                }
+
+                //bonus
+                &.bonusPage {
+                    
+                    //表格
+                    .bonusGroup {
+
+                        &>div {
+                            width: 100%;
+                            height: auto;
+                            display: none;
+
+                            &.display {
+                                display: block;
+                            }
+
+                            table {
+                                width: 100%;
+                                height: auto;
+                                border: solid 1px $mainColor_2;
+                                border-radius: 10px;
+                                border-collapse: separate;
+        
+                                tbody {
+                                    width: 100%;
+                                    height: auto;
+        
+                                    tr {
+                                        width: 100%;
+                                        height: auto;
+
+                                        th {
+                                            height: 55px;
+                                            vertical-align: middle;
+                                            background: $mainColor_5;
+                                            border-style: solid;
+                                            border-width: 0 1px 1px 0;
+                                            border-color: $mainColor_2;
+
+                                            &:first-child {
+                                                width: 15%;
+                                                border-radius: 10px 0 0 0;
+                                            }
+
+                                            p {
+                                                max-width: 100%;
+                                                display: inline-block;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                color: $fontColor_3;
+                                                padding: 10px;
+                                                @include textHidden;
+                                                cursor: default;
+                                            }
+                                        }
+
+                                        td {
+                                            width: 10%;
+                                            height: 55px;
+                                            vertical-align: middle;
+                                            border-radius: 10px 0 0 0;
+                                            border-style: solid;
+                                            border-width: 0 1px 1px 0;
+                                            border-color: $mainColor_2;
+                                            position: relative;
+        
+                                            &:last-child {
+                                                border-radius: 0 10px 0 0;
+                                                border-width: 0 0 1px 0;
+                                            }
+        
+                                            p {
+                                                max-width: 100%;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                color: $fontColor_3;
+                                                text-align: center;
+                                                padding: 10px;
+                                                @include textHidden;
+                                                cursor: default;
+                                            }
+                                        }
+        
+                                        &:last-child {
+
+                                            td {
+                                                border-bottom: 0px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.referral,
+                            &.bonusHistory {
+
+                                th {
+                                    &:first-child {
+                                        width: 15%;
+                                        border-radius: 10px 0 0 0;
+                                    }
+
+                                    &:nth-child(2) {
+                                        width: 15%; 
+                                    }
+
+                                    &:nth-child(3) {
+                                        width: 20%; 
+                                    }
+
+                                    &:last-child {
+                                        width: 20%;
+                                        border-radius: 0 10px 0 0;
+                                        border-width: 0 0 1px 0;
+                                    }
+                                }
+                            }
+
+                            &.referral {
+
+                                tr {
+
+                                    td {
+
+                                        &:first-of-type {
+
+                                            p {
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // 回扣獎勵紀錄
+                        .rebateHistory {
+                          
+                            table {
+        
+                                tbody {
+                                   
+        
+                                    tr {
+                                      
+
+                                        th {
+                                           
+                                            &:first-child {
+                                                width: 45%;
+                                                border-radius: 10px 0 0 0;
+                                            }
+
+                                            &:last-child {
+                                                width: 55%;
+                                                border-radius: 0 10px 0 0;
+                                                border-width: 0 0 1px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //dealHistory
+                &.dealHistory {
+
+                    .content {
+
+                        .betGroup {
+
+                            &>div {
+                                width: 100%;
+                                height: auto;
+                                display: none;
+
+                                &.display {
+                                    display: block;
+                                }
+
+                                table {
+                                    width: 100%;
+                                    height: auto;
+                                    border: solid 1px $mainColor_2;
+                                    border-radius: 10px;
+                                    border-collapse: separate;
+            
+                                    tbody {
+                                        width: 100%;
+                                        height: auto;
+            
+                                        tr {
+                                            width: 100%;
+                                            height: auto;
+
+                                            &:last-child {
+
+                                                td {
+                                                    border-bottom: 0px;
+                                                }
+                                            }
+
+                                            th {
+                                                width: 10%;
+                                                height: 55px;
+                                                vertical-align: middle;
+                                                background: $mainColor_5;
+                                                border-style: solid;
+                                                border-width: 0 1px 1px 0;
+                                                border-color: $mainColor_2;
+
+                                                &:first-child {
+                                                    border-radius: 10px 0 0 0;
+                                                }
+
+                                                &:last-child {
+                                                    width: 30%;
+                                                    border-radius: 0 10px 0 0;
+                                                    border-width: 0 0 1px 0;
+                                                }
+
+                                                &>p {
+                                                    display: inline-block;
+                                                    font-size: 14px;
+                                                    font-weight: bold;
+                                                    line-height: 16px;
+                                                    color: $fontColor_3;
+                                                    @include textHidden;
+                                                    padding: 10px;
+                                                    cursor: default;
+                                                }
+                                            }
+            
+                                            td {
+                                                width: 10%;
+                                                height: 55px;
+                                                vertical-align: middle;
+                                                border-radius: 10px 0 0 0;
+                                                border-style: solid;
+                                                border-width: 0 1px 1px 0;
+                                                border-color: $mainColor_2;
+                                                position: relative;
+            
+                                                &:last-child {
+                                                    border-radius: 0 10px 0 0;
+                                                    border-width: 0 0 1px 0;
+                                                }
+
+                                                &>p {
+                                                    font-size: 14px;
+                                                    font-weight: bold;
+                                                    line-height: normal;
+                                                    color: $fontColor_3;
+                                                    text-align: center;
+                                                    padding: 10px;
+                                                    @include textHidden;
+                                                    cursor: default;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                    // 交易紀錄
+                                &.transaction {
+
+                                    tr {
+
+                                        td {
+
+                                            &:nth-child(5) {
+
+                                                p {
+                                                    color: $fontColor_8;
+                                                }
+                                            }
+
+                                            &:last-child {
+
+                                                p {
+                                                    text-align: start;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // 投注金額紀錄
+                                &.amount {
+
+                                    table {
+                                    
+                                        th {
+                                            width: auto;
+
+                                            &:last-of-type {
+                                                width: 25%;
+                                            }
+                                        }
+                                        
+                                        td {
+
+                                            &:last-child {
+
+                                                td {
+                                                    border-bottom: 0px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // 投注紀錄
+                                &.bet {
+
+                                    table {
+                                        tr {
+
+                                            th {
+
+                                                &:last-child {
+                                                    width: 4%;
+                                                }
+                                            }
+
+                                            td {
+
+                                                &:last-child {
+
+                                                    p {
+                                                        text-align: start;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }   
+                        }
+                    }
+
+                    //按鈕
+                    .buttonGroup {
+                        display: flex;
+                        justify-content: center;
+                        margin: 5px auto 27px;
+
+                        button {
+                            width: 220px;
+                            height: 30px;
+                            @include btnStyle_4;
+                            margin: 0 10px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .dateGroup { // 金額 日期 預設時間選擇
+                        display: none;
+                        width: 100%;
+                        height: 150px;
+                        background: $SubBG_5;
+                        border-radius: 5px;
+                        margin-bottom: 30px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        &.display {
+                            display: flex;
+                        }
+
+                        .rightButton {
+                            width: auto;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+
+                            p {
+                                font-size: 12px;
+                                text-align: center;
+                                color: $fontColor_4;
+                                margin-top: 20px;
+                            }
+                            //日期按鈕
+                            .btnGroup {
+                                display: flex;
+                                align-items: center;
+                                margin-top: 25px;
+                                
+                                .dateBtn {
+                                    display: flex;
+        
+                                    button {
+                                        width: 60px;
+                                        height: 30px;
+                                        @include btnStyle_4;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                //搜尋按鈕
+                                .searchBtn {
+                                    width: 100px;
+                                    height: 40px;
+                                    @include btnStyle_2;
+                                    margin-left: 40px;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .dateGroup {
+                        width: 100%;
+                        height: auto;
+                        padding: 25px 40px 15px;
+                        margin: 0 0 30px;
+
+                        form {
+                            width: 100%;
+                            height: auto;
+
+                            label {
+                                width: auto;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+
+                                &>p {
+                                    color: $fontColor_4;
+                                    font-size: 13px;
+                                    text-align: end;
+                                    white-space: nowrap;
+                                    flex-shrink: 0;
+                                    margin-right: 10px;
+                                }
+
+                                input,
+                                select {
+                                    width: 290px;
+                                    height: 45px;
+                                    @include inputStyle_0;
+                                    appearance: none;
+
+                                    option {
+                                        font-size: 14px;
+                                        color: $fontColor_4;
+                                    }
+                                }
+
+                                i {
+                                    width: 15px;
+                                    height: 15px;
+                                    border-width: 0 2px 2px 0;
+                                    border-color: $Border_11;
+                                    border-style: solid;
+                                    position: absolute;
+                                    top: 12px;
+                                    right: 25px;
+                                    transform: rotate(45deg);
+                                    pointer-events: none
+                                }
+                            }
+
+                            .inputGroup {
+                                display: none;
+                                width: 100%;
+                                height: auto;
+                                align-items: center;
+
+                                &.display {
+                                    display: flex;
+                                }
+    
+                                &>.hint {
+                                    color: $fontColor_4;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                }
+        
+                                label {
+                                    
+                                    &:nth-of-type(1) {
+                                        margin-right: 20px;
+
+                                        &>p {
+                                            width: 42px;
+                                        }
+                                    }
+
+                                    
+                                    &:nth-of-type(2) {
+
+                                        &>p {
+                                            width: auto;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .selectDate {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                margin: 20px 0;
+
+                                label {
+
+                                    &>p {
+                                         width: 42px;
+                                    }
+
+                                    &>input {
+                                        flex-shrink: 0;
+                                    }
+
+                                    .calendar {
+                                        width: auto;
+                                        height: auto;
+                                        background: transparent;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-45%);
+                                        right: 20px;
+    
+                                        svg {
+                                            width: 22px;
+                                            height: 22px;
+    
+                                            .cls-1 {
+                                                fill: $mainColor_0;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btnGroup { 
+                                    width: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 0 20px;
+
+                                    .dateBtn {
+                                        display: flex;
+            
+                                        button {
+                                            width: 60px;
+                                            height: 30px;
+                                            @include btnStyle_4;
+                                            color: $fontColor_4;
+                                            font-weight: bold;
+                                            margin-right: 10px;
+                                        }
+                                    }
+
+                                    .searchBtn {
+                                        width: 100px;
+                                        height: 40px;
+                                        @include btnStyle_2;
+                                        margin-left: 20px;
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+    
+                            &>.hint {
+                                display: none;
+                                width: 100%;
+                                text-align: center;
+                                cursor: default;
+                            }
+                        }
+                    }
+                    
+                    //頁數
+                    .countBlock {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;                        
+                        margin: 20px auto 0;
+
+                        &>p {
+                            display: flex;
+                            align-items: center;
+                            color: $fontColor_3;
+                            font-size: 14px;
+
+                            span {
+                                margin: 0 5px;
+                            }
+                        }
+
+                        &>ul {
+                            width: auto;
+                            display: flex;
+                            align-items: center;
+
+                            li {
+                                width: auto;
+                                border-radius: 5px;
+                                padding: 2px 8px;
+                                margin-right: 5px;
+                                cursor: pointer;
+
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+
+                                &:hover,&:active,&.active {
+                                    background: $mainColor_0 ;
+
+                                    p {
+                                        color: $fontColor_2;
+                                    }
+                                }
+
+                                p {
+                                    color: $fontColor_3;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            svg {
+                                width: 15px;
+                                height: 15px;
+                                margin-left: 5px;
+                                cursor: pointer;
+
+                                &.prevBtn {
+                                    margin-right: 10px;
+                                    transform: rotate(-180deg);
+                                }
+
+                                .cls-1 {
+                                    fill: $fontColor_3;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //promotionApply
+                &.promotionApply {
+
+                    //主區塊
+                    .infoGroup {
+                        width: auto;
+                        height: auto;
+
+                        .promotion,
+                        .withdraw,
+                        .history {
+                            width: auto;
+                            height: auto;
+                            display: none;
+
+                            &.display {
+                                display: block;
+                            }
+
+                            .applyGroup {
+                                width: 940px;
+                                height: auto;
+                                border: solid 1px $mainColor_2;
+                                border-radius: 10px;
+                                border-collapse: separate;
+                                margin: 30px auto 0;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                padding-bottom: 17px;
+                                margin-bottom: 20px;
+                                
+                                .top {
+                                    width: 100%;
+                                    height: 55px;
+                                    background: $SubBG_3;
+                                    border-radius: 10px 10px 0 0;
+                                    border-bottom: 1px solid $mainColor_2;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 0 20px 0 25px;
+
+                                    p {
+                                        font-size: 16px;
+                                    }
+
+                                    .bonusPoint {
+                                        width: auto;
+                                        height: auto;
+                                        margin-left: 300px;
+
+                                        span {
+                                            font-size: 12px;
+                                            color: $fontColor_3;
+                                            margin-right: 20px;
+                                        }
+
+                                        em {
+                                            font-size: 16px;
+                                            color: $fontColor_3;
+                                            color: $mainColor_0;
+                                        }
+                                        p {
+                                            font-size: 16px;
+                                            color: $fontColor_3;
+                                            display: inline-block;
+                                        }
+                                    }
+                                    //申請按鈕
+                                    button {
+                                        width: 100px;
+                                        height: 30px;
+                                        font-size: 14px;
+                                        @include btnStyle_4;
+                                        margin: 0 10px;
+                                    }
+                                }
+                                //簡易資訊
+                                table {
+                                    width: 95%;
+                                    height: auto;
+                                    margin: 20px 0 10px;
+
+                                    tbody {
+                                        width: auto;
+                                        height: auto;
+
+                                        tr {
+                                            width: auto;
+                                            height: auto;
+
+                                            td {
+                                                height: 20px;
+                                                font-size: 12px;
+                                                font-weight: bold;
+                                                color: $fontColor_3;
+
+                                                &:first-child {
+                                                    width: 20%;
+                                                }
+                                                &:nth-child(2) {
+                                                    width: 15%;
+                                                }
+                                                &:nth-child(3) {
+                                                    width: 20%;
+                                                }
+                                                &:nth-child(4) {
+                                                    width: 15%;
+                                                }
+                                                &:nth-child(5) {
+                                                    width: 20%;
+                                                }
+                                                &:nth-child(6) {
+                                                    width: 10%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //詳細資訊
+                                .detailGroup {
+                                    width: auto;
+                                    height: auto;
+                                    display: none;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    
+                                    &.display {
+                                        display: flex;
+                                    }
+
+                                    .banner {
+                                        width: auto;
+                                        height: auto;
+
+                                        img {
+                                            width: 900px;
+                                            height: 234px;
+                                            object-fit: contain;
+                                        }
+                                    }
+                                    .detail {
+                                        width: auto;
+                                        height: auto;
+                                        margin: 0 20px;
+
+                                        div {
+                                            width: auto;
+                                            height: auto;
+                                            margin-top: 25px;
+
+                                            p {
+                                                font-size: 12px;
+                                                color: $fontColor_3;
+
+                                            }
+
+                                            ul {
+
+                                                li {
+                                                    font-size: 12px;
+                                                    color: $fontColor_3;
+                                                    letter-spacing: 1px;
+                                                    line-height: 1.8;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //詳細資訊按鈕
+                                .expandBtn {
+                                    
+                                    button {
+                                        width: 301px;
+                                        height: 30px;
+                                        @include btnStyle_4;
+                                        margin-top: 20px;
+                                        display: none;
+            
+    
+                                        &.dtBtn {
+                                            &.display {
+                                                display: block;
+                                            }
+                                        }
+    
+                                        &.closeBtn {
+    
+                                            &.display {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //bankCard
+                &.bankcardPage {
+                    
+                    .cardList {
+                        width: 100%;
+                        height: auto;
+
+                        .card {
+                            width: 200px;
+                            height: 120px;
+                            padding: 10px 15px;
+                            margin-right: 15px;
+
+                            &.addCard {
+                                position: relative;
+
+                                p,
+                                span {
+                                    display: none;
+                                }
+
+
+                                &::before {
+                                    content: "口座が登録されていません";
+                                    width: auto;
+                                    @include textStyle_2;
+                                    font-size: 12px;
+                                    white-space: nowrap;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                }
+                            }
+
+                            p {
+                                font-size: 12px;
+                                color: $fontColor_2;
+                                @include textStyle_2;
+                            }
+
+                            .bankDetail {
+                                display: flex;
+                                align-items: center;
+                                margin: 0 0 30px;
+
+                                .name {
+                                    margin-right: 15px;
+                                }
+                            }
+
+                            .num {
+                                display: flex;
+                                align-items: center;
+
+                                span {
+                                    font-size: 12px;
+                                    color: $fontColor_2;
+                                    margin-left: 15px;
+                                    @include textStyle_2;
+                                }
+                            }
+
+                            .username {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .accountType {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 30px 0;
+
+                        li {
+                            width: 250px;
+                            height: 90px;
+                            @include helpList_Style;
+                            margin-right: 10px;
+                            position: relative;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            &.active {
+
+                                &::after {
+                                    transform: translateY(-50%) rotate(135deg);
+                                }
+                            }
+
+                            svg {
+                                width: 70px;
+                                height: 70px;
+                            }
+
+                            &::after {
+                                content: "";
+                                width: 10px;
+                                height: 10px;
+                                border-style: solid;
+                                border-width: 2px 2px 0 0;
+                                border-color: $Border_7;
+                                position: absolute;
+                                top: 50%;
+                                right: 15px;
+                                -webkit-transform: translateY(-50%) rotate(45deg);
+                                transform: translateY(-80%) rotate(45deg);
+                            }
+                        }
+                    }
+
+                    .cardType {
+                        display: none;
+                        width: 100%;
+                        height: auto;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        
+    
+                        form {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+    
+                            label {
+                                width: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                margin-bottom: 20px;
+    
+                                &.forSelect {
+                                    margin: 0 0 45px;
+    
+                                    &::after {
+                                        content: "";
+                                        width: 10px;
+                                        height: 10px;
+                                        border-style: solid;
+                                        border-width: 2px 2px 0 0;
+                                        border-color: $Border_7;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 15px;
+                                        -webkit-transform: translateY(-50%) rotate(45deg);
+                                        transform: translateY(-80%)  rotate(135deg);
+                                    }
+
+                                    &:nth-of-type(2) {
+
+
+                                        .hint {
+                                            bottom: -25px;
+                                        }
+                                    }
+                                }
+    
+                                .itemName {
+                                    width: 141px;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-align: end;
+                                    margin-right: 25px;
+                                }
+    
+                                input,
+                                select {
+                                    width: 500px;
+                                    height: 45px;
+                                    @include inputStyle_0;
+                                }
+
+                                select {
+                                    appearance: none;
+                                }
+    
+                                .hint {
+                                    width: 504px;
+                                    color: $fontColor_14;
+                                    font-size: 12px;
+                                    line-height: 16px;
+                                    position: absolute;
+                                    bottom: -35px;
+                                    left: 25%;
+                                }
+                            }
+    
+                            .checkBtn {
+                                width: 200px;
+                                height: 35px;
+                                @include btnStyle_3;
+                                margin: 30px auto 0;
+                            }
+                        }
+                    }
+                }
+                
+                //維護
+                &.maintain {
+
+                    .maintainTable {
+                        width: 100%;
+                        height: auto;
+    
+                        table {
+                            width: 100%;
+                            height: auto;
+                            border: solid 1px $mainColor_2;
+                            border-radius: 10px;
+                            border-collapse: separate;
+    
+                            tbody {
+                                width: 100%;
+                                height: auto;
+    
+                                tr {
+    
+                                    th {
+                                        width: 50%;
+                                        height: 55px;
+                                        vertical-align: middle;
+                                        background: $mainColor_5;
+                                        border-radius: 10px 0 0 0;
+                                        border-style: solid;
+                                        border-width: 0 1px 1px 0;
+                                        border-color: $mainColor_2;
+    
+                                        &:last-child {
+                                            border-radius: 0 10px 0 0;
+                                            border-width: 0 0 1px 0;
+                                        }
+    
+                                        p {
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            color: $fontColor_3;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            display: inline-block;
+                                            padding: 2px;
+                                            cursor: default;
+                                        }
+                                    }
+    
+                                    td {
+                                        width: 50%;
+                                        height: 55px;
+                                        vertical-align: middle;
+                                        border-radius: 10px 0 0 0;
+                                        border-style: solid;
+                                        border-width: 0 1px 1px 0;
+                                        border-color: $mainColor_2;
+                                        position: relative;
+    
+                                        &:last-child {
+                                            border-radius: 0 10px 0 0;
+                                            border-width: 0 0 1px 0;
+                                        }
+    
+                                        p {
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            color: $fontColor_3;
+                                            text-align: center;
+                                            padding: 2px;
+                                            @include textHidden;
+                                            cursor: default;
+                                        }
+                                    }
+    
+                                    &:last-child {
+                                        
+                                        td {
+                                            border-bottom: 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

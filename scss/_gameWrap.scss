@@ -1,0 +1,799 @@
+.gameWrap {
+    min-height: 1000px;
+    padding-bottom: 30px;
+
+    //主內容
+    .content {
+        width: 100%;
+        min-width: 1280px;
+        height: auto;
+        margin: 0 auto 48px;
+        padding-top: 25px;
+
+        .top {
+            width: 100%;
+            min-width: 1280px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+
+            //標題
+            .title {
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 60px;
+
+                p {
+                    font-size: 65px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    color: $fontColor_7;
+                    cursor: default;
+
+                    &.sports {
+                        color: $mainColor_0;
+                    }
+
+                    &.popular {
+                        color: $fontColor_8;
+                    }
+
+                    &.suggest,
+                    &.promotion {
+                        color: $fontColor_9;
+                    }
+
+                    &.live {
+                        color: $fontColor_10;
+                    }
+
+                    &.slot {
+                        color: $fontColor_11;
+                    }
+
+                    &.fish {
+                        color: $fontColor_12;
+                    }
+                }
+
+                span {
+                    font-size: 30px;
+                    font-weight: bold;
+                    cursor: default;
+                }
+            }
+            
+            .banner {
+                width: 100%;
+                // min-width: 1280px;
+                padding: 300px 0 0;
+            }
+        }
+
+        //遊戲搜尋
+        .searchGroup {
+            width: 1200px;
+            height: 90px;
+            background: $MainBG_2;
+            border-radius: 5px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            form {
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-right: 40px;
+
+                p {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-right: 20px;
+                    color: $fontColor_4;
+                    cursor: de;
+                }
+
+                &:first-child {
+
+                    &:after {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-width: 0 2px 2px 0;
+                        border-style: solid;
+                        // border-color: $footer_Title;
+                        position: absolute;
+                        right: 20px;
+                        top: 15px;
+                        transform: rotate(45deg);
+                        pointer-events: none;
+                    }
+                }
+
+                select {
+                    width: 300px;
+                    height: 45px;
+                    @include inputStyle_0;
+                    color: $fontColor_4;
+                    appearance: none;
+
+                    option {
+                        font-size: 14px;
+                    }
+                }
+
+                label {
+                    width: auto;
+                    height: auto;
+
+                    input {
+                        width: 300px;
+                        height: 45px;
+                        border-radius: 5px;
+                        border: 1px solid $Border_1;
+                        padding-left: 20px;
+                        
+                        &::placeholder {
+                            color: $Border_1;
+                        }
+                    }
+                }
+                
+                button {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                }
+            }
+        }
+
+        //大標
+        .bigTitle {
+            width: 100%;
+            color: $fontColor_1;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        //種類按鈕
+        .buttonGroup {
+            display: flex;
+            justify-content: center;
+            margin: 5px auto;
+
+            button {
+                width: 220px;
+                height: 30px;
+                @include btnStyle_4 ;
+                margin: 0 10px;
+                font-size: 14px;
+            }
+        }
+
+        // table fishing slot 遊戲列表
+        .gameGroup {
+            width: 100%;
+            min-width: 1280px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+            //遊戲列
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 70px;
+                margin: 25px auto;
+
+                //logo區
+                .logoBox {
+                    width: auto;
+                    height: 171px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 50px;
+
+                    div {
+                        width: 200px;
+                        height: 101px;
+                    }
+                }
+
+                ol {
+                    width: 1290px;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    overflow: hidden;
+
+                    .gameBox {
+                        width: 250px;
+                        height: 191px;
+                        flex-shrink: 0;
+                        margin: 0 10px 0 0;
+                        position: relative;
+                        cursor: pointer;
+                        
+                        .likeGame {
+                            width: 26px;
+                            height: 22px;
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                        }
+
+                        .pic {
+                            width: 250px;
+                            height: 170px;
+                            background: $mainColor_5;
+                            object-fit: contain;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        p {
+                            width: 100%;
+                            max-width: 250px;
+                            font-size: 14px;
+                            text-align: center;
+                            color: $fontColor_4;
+                            padding: 0 10px;
+                            @include textHidden;
+                            margin-top: 5px;
+                            cursor: default;
+                        }
+                    }                  
+                }
+                //更多遊戲 按鈕
+                .otherBtn {
+                    width: 160px;
+                    height: 34px;
+                    @include btnStyle_0;
+                    white-space: nowrap;
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 0 10px;
+                    margin-left: 50px;
+
+                    i {
+                        width: 10px;
+                        height: 10px;
+                        border-width: 0 2px 2px 0;
+                        border-style: solid;
+                        border-color: $fontColor_2;
+                        display: inline-block;
+                        transform: rotate(-45deg);
+                        margin-left: 10px;
+                    }
+
+                    &:hover,&:active,&.active {
+                        background: $mainColor_3;
+
+                        i {
+                            border-color: $Border_3;
+                        }
+                    }
+                }  
+            }
+        }
+        // table fishing slot -inner 遊戲列表
+        .gameInner {
+            width: 100%;
+            min-width: 1280px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logoBox {
+                width: auto;
+                height: auto;
+                margin: 55px 0 30px;
+
+                .pgo {
+                    width: 200px;
+                    height: 55px;
+                }
+                .rsg {
+                    width: 154px;
+                    height: 90px;
+                }
+                .hg {
+                    width: 200px;
+                    height: 56px;
+                }
+            }
+            .backBtn {
+                width: 300px;
+                height: 34px;
+                border-radius: 20px;
+                background: $mainColor_0;
+                color: $fontColor_2;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                &:hover,&:active,&.active {
+                    background: $MainBG_2;
+                    color: $fontColor_1;
+
+                    i {
+                        border-color: $fontColor_1;
+                    }
+                }
+
+                i {
+                    width: 10px;
+                    height: 10px;
+                    border-width: 0 2px 2px 0;
+                    border-style: solid;
+                    border-color: $fontColor_2;
+                    transform: rotate(-45deg);
+                    margin-left: 10px;
+                }
+            }
+            ul {
+                width: 1280px;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+                gap: 50px 0;
+                justify-content: center;
+                margin: 0 auto;
+
+                .gameBox {
+                    width: 250px;
+                    height: 171px;
+                    margin: 0 5px;
+                    flex-shrink: 0;
+                    background: $MainBG_2;
+                    position: relative;
+                    cursor: pointer;
+                    
+                    .likeGame {
+                        width: 26px;
+                        height: 22px;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                    }
+                    .pic {
+                        width: 250px;
+                        height: 171px;
+                        object-fit: contain;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                        color: $fontColor_4;
+                        margin-top: 5px;
+                    }
+                }                  
+            }
+        }
+        
+        // live sports 主區塊
+        .center {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 70px;
+
+            //主圖片
+            .mainImg {
+                width: 600px;
+                height: 431px;
+                object-fit: contain;
+                
+            }
+
+            // 主文字
+            .textBox {
+                width: auto;
+                height: auto;
+                margin-left: 50px;
+
+                .mainCnt {
+                    width: 660px;
+                    height: auto;
+                    line-height: 1.6;
+
+                    p {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: $fontColor_4;
+                    }
+                }
+                //live 內容
+                .liveCnt {
+                    width: 1200px;
+                    height: auto;
+                    line-height: 1.6;
+
+                    p {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: $fontColor_4;
+                    }
+                }
+            }
+        }
+        //live sports 遊戲列
+        ul {
+            width: auto;
+            height: auto;
+
+            //有多個選項選項時
+            &.gridWrap {
+                width: 1280px;
+                height: auto;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                grid-template-columns: repeat(4,1fr);
+                gap: 60px 20px;
+                margin: 0 auto;
+            }
+
+            //只有一個選項時
+            &.flexWrap {
+                width: 1280px;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            .gameitem {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                cursor: pointer;
+    
+                .gamePic {
+                    width: 360px;
+                    height: 260px;
+                    border: 1px solid $Border_5;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    img {
+                        width: auto;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+    
+                p {
+                    font-size: 14px;
+                    color: $fontColor_4;
+                    margin-top: 5px;
+                }
+            }
+        }
+        // popular suggest 遊戲列
+        .simpleGame {
+            width: 100%;
+            height: auto;
+            margin: 0 auto 350px;
+
+            ul {
+                width: 1280px;
+                height: auto;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(auto-fill, minmax(247px, 1fr));
+                grid-auto-rows: auto;
+                gap: 50px 10px;
+                margin: 0 auto;
+
+                li {
+                    width: 100%;
+                    height: 169px;
+                    background: $MainBG_2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:active,&.active {
+
+                        .likeGame {
+                            width: 26px;
+                            height: 22px;
+                            position: absolute;
+                            left: 10px;
+                            top: 10px;
+                        }
+                    }
+                    .likeGame {
+                        width: 26px;
+                        height: 22px;
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                    }
+
+                    .pic {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    p {
+                        padding-top: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        //promotion 
+        .promotionList {
+            display: none;
+            width: 1260px;
+            height: auto;
+            margin: 0 auto;
+
+            &.display {
+                display: block;
+            }
+
+            &>li {
+                width: 100%;
+                height: 230px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: $MainBG_2;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 0 0 10px;
+
+                .prPic {
+                    width: 800px;
+                    height: 208px;
+                }
+
+                .textBlock {
+                    width: 400px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+
+                    .prTitle {
+                        color: $fontColor_4;
+                        font-size: 24px;
+                        font-weight: bold;
+                        line-height: 26px;
+                        @include textHidden;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+
+                    .infoBox {
+                        width: 100%;
+                        color: $fontColor_5;
+                        font-size: 14px;
+                        line-height: 18px;
+                        text-align: center;
+                        margin: 30px 0;
+                    }
+
+                    .seeMoreBtn {
+                        width: 260px;
+                        height: 40px;
+                        @include btnStyle_0;
+                        justify-content: space-between;
+                        font-size: 16px;
+                        font-weight: bold;
+                        padding: 0 20px;
+                        margin: 0 auto;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            width: 8px;
+                            height: 8px;
+                            border-style: solid;
+                            border-width: 2px 2px 0 0;
+                            border-color: $fontColor_2;
+                            position: absolute;
+                            top: 50%;
+                            right: 20px;
+                            -webkit-transform: translateY(-50%) rotate(45deg);
+                            transform: translateY(-50%) rotate(45deg);
+                        }
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                border-color: $Border_10;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //頁數
+            .countBlock {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;                        
+                margin: 30px auto 0;
+
+                &>p {
+                    display: flex;
+                    align-items: center;
+                    color: $fontColor_3;
+                    font-size: 14px;
+                    margin: 0 0 10px;
+
+                    span {
+                        margin: 0 5px;
+                    }
+                }
+
+                &>ul {
+                    width: auto;
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        width: auto;
+                        border-radius: 5px;
+                        padding: 2px 8px;
+                        margin-right: 5px;
+                        cursor: pointer;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        &:hover,&:active,&.active {
+                            background: $mainColor_0 ;
+
+                            p {
+                                color: $fontColor_2;
+                            }
+                        }
+
+                        p {
+                            color: $fontColor_3;
+                            cursor: pointer;
+                        }
+                    }
+
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 5px;
+                        cursor: pointer;
+
+                        &.prevBtn {
+                            margin-right: 10px;
+                            transform: rotate(-180deg);
+                        }
+
+                        .cls-1 {
+                            fill: $fontColor_3;
+                        }
+                    }
+                }
+            }
+        }
+
+        .promotionDetail {
+            display: none;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+
+            &.display {
+                display: flex;
+            }
+
+            .promotionPic {
+                width: 1200px;
+                height: 312px;
+                margin: 10px auto;
+            }
+
+            .pr_title {
+                color: $fontColor_4;
+                font-size: 26px;
+                font-weight: bold;
+                margin: 20px auto 30px;
+                cursor: default;
+            }
+
+            .text_block {
+                width: 1200px;
+                min-height: 600px;
+                background: $MainBG_2;
+                border-radius: 10px;
+                padding: 25px;
+                margin: 0 auto;
+
+                &>p {
+                    color: $fontColor_5;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                    cursor: default;
+                }
+            }
+
+            .backBtn {
+                width: 260px;
+                height: 40px;
+                @include btnStyle_0;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 0 20px;
+                margin: 20px auto 0;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-style: solid;
+                    border-width: 2px 2px 0 0;
+                    border-color: $fontColor_2;
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    -webkit-transform: translateY(-50%) rotate(45deg);
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                &:hover,&:active,&.active {
+
+                    &::after {
+                        border-color: $Border_10;
+                    }
+                }
+            }
+        }
+    }
+}

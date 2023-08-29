@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>APA Casino</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!--上部-->
+        <div class="top">
+            <!--logo-->
+            <img class="logo" src="../images/icon/logo.png" onclick="window.location.href='../index.html'">
+            <!-- 搜尋 -->
+            <div class="search">
+                <div class="searchGroup">
+                    <label for="">
+                        <input type="text" placeholder="お探しのゲーム名を入力">
+                        <i></i>
+                    </label>
+                </div>
+            </div>
+            <!--右_已登入-->
+            <ul class="user alLogin innerType display">
+                <!--等級-->
+                <li class="lv level_1">
+                    <i></i>
+                    <div class="userGroup">
+                        <p>USER NAME</p>
+                        <button><p>¥88,888</p></button>
+                    </div>
+                </li>
+                <!-- 入金 -->
+                <li class="payment">
+                    <button onclick="window.location.href='./deposit.html'"><i></i></button> 
+                </li>
+                <!-- 振替 -->
+                <li class="transfer">
+                    <button onclick="window.location.href='./transfer.html'"><i></i></button>
+                </li>
+                <!-- 出金 -->
+                <li class="withdraw">
+                    <button onclick="window.location.href='./withdraw.html'"><i></i></button>
+                </li>
+                <!-- インボックス -->
+                <li class="mail">
+                    <button onclick="window.location.href='./mail.html'">
+                        <i></i>
+                        <p class="remind display"></p>
+                    </button>
+                </li>
+                <li class="logout">
+                    <button onclick="window.location.href='../index.html'">ログアウト</button>
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>繁體中文</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option selected>日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <!--選單-->
+        <div class="gameNav">
+            <div class="center">
+                <ul>
+                    <li class="homeBtn" onclick="window.location.href='../index.html'">トップページ</li>
+                    <li class="myBtn active" onclick="window.location.href='./member.html'">マイページ</li>
+                    <li class="promotionBtn" onclick="window.location.href='./promotion.html'">プロモーション</li>
+                    <li class="hotBtn" onclick="window.location.href='./popular.html'">人気ゲーム</li>
+                    <li class="sportBtn"  onclick="window.location.href='./sportPage.html'">スポーツ</li>
+                    <li class="liveBtn" onclick="window.location.href='./livePage.html'">ライブゲーム</li>
+                    <li class="slotBtn" onclick="window.location.href='./slotPage.html'">スロット</li>
+                    <li class="fishBtn" onclick="window.location.href='./fishPage.html'">フィッシング</li>
+                    <li class="boardBtn" onclick="window.location.href='./tablePage.html'">テーブルゲーム</li>
+                </ul>
+            </div>
+        </div>
+        <!--下拉式選單-->
+        <!-- <div class="topGameList">
+            <div class="listWrap">
+                <div class="center">
+                    <i class="prev"></i>
+                    <div class="container">
+                    <ul class="hot">
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_1.png">
+                            </div>
+                            <p>Japanese Mahjong</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_2.png">
+                            </div>
+                            <p>Koi-Koi</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_3.png">
+                            </div>
+                            <p>Big Win Cat</p>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/partner/hot/hotGame_4.png">
+                            </div>
+                            <p>Oiran Dream</p>
+                        </li>
+                    </ul>
+                    <ul class="sport">
+                        <li onclick="openSportGame()">
+                            <div>
+                                <img src="../images/partner/sport/36588.png">
+                            </div>
+                            <p>36588 SPORTS</p>
+                        </li>
+                    </ul>
+                    <ul class="live">
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_1.png">
+                            </div>
+                            <p>AG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_2.png">
+                            </div>
+                            <p>MG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_3.png">
+                            </div>
+                            <p>PP CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_4.png">
+                            </div>
+                            <p>EVO CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_5.png">
+                            </div>
+                            <p>ALLBET CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_6.png">
+                            </div>
+                            <p>SA CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_7.png">
+                            </div>
+                            <p>OG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_8.png">
+                            </div>
+                            <p>WM CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_9.png">
+                            </div>
+                            <p>DG CASINO</p>
+                        </li>
+                        <li onclick="openLiveGame()">
+                            <div>
+                                <img src="../images/partner/live/live_10.png">
+                            </div>
+                            <p>RG CASINO</p>
+                        </li>
+                    </ul>
+                    <ul class="slot">
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_1.png">
+                            </div>
+                            <p>HABANERO</p>
+                            <div class="fixBox display">
+                                <p class="title">修理中</p>
+                                <p>2022/03/02 PM 2:00 ~</p>
+                                <p>2020/03/02 PM 4:00</p>
+                            </div>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_2.png">
+                            </div>
+                            <p>RSG</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_3.png">
+                            </div>
+                            <p>PP SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_4.png">
+                            </div>
+                            <p>GoldHero</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_5.png">
+                            </div>
+                            <p>PNG</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_6.png">
+                            </div>
+                            <p>JILI SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_7.png">
+                            </div>
+                            <p>YGG</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_8.png">
+                            </div>
+                            <p>Microgaming</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_9.png">
+                            </div>
+                            <p>BOOONGO GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_10.png">
+                            </div>
+                            <p>IFUN GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_11.png">
+                            </div>
+                            <p>EVO PLAY</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_12.png">
+                            </div>
+                            <p>RELAX</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_13.png">
+                            </div>
+                            <p>NO LIMIT CITY</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_14.png">
+                            </div>
+                            <p>AUX</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_15.png">
+                            </div>
+                            <p>TPG GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_16.png">
+                            </div>
+                            <p>SIMPLEPLAY GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_17.png">
+                            </div>
+                            <p>PLAYSON GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_18.png">
+                            </div>
+                            <p>BLUEPRINT GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_19.png">
+                            </div>
+                            <p>RED RAKE GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_20.png">
+                            </div>
+                            <p>4ThePlayer GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_21.png">
+                            </div>
+                            <p>ELK GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_22.png">
+                            </div>
+                            <p>ELYSIUM GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./slotPage.html'">
+                            <div>
+                                <img src="../images/partner/slot/slot_23.png">
+                            </div>
+                            <p>QUICKSPIN GAMES</p>
+                        </li>
+                    </ul>
+                    <ul class="fish">
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_1.png">
+                            </div>
+                            <p>RSG GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_2.png">
+                            </div>
+                            <p>JILI SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_3.png">
+                            </div>
+                            <p>TPG GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./fishPage.html'">
+                            <div>
+                                <img src="../images/partner/fish/fish_4.png">
+                            </div>
+                            <p>SIMPLEPLAY GAMES</p>
+                        </li>
+                    </ul>
+                    <ul class="board">
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_1.png">
+                            </div>
+                            <p>HABANERO</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_2.png">
+                            </div>
+                            <p>JILI SLOTS</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_3.png">
+                            </div>
+                            <p>Microgaming</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_4.png">
+                            </div>
+                            <p>IFUN GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_5.png">
+                            </div>
+                            <p>RED RAKE GAMES</p>
+                        </li>
+                        <li onclick="window.location.href='./tablePage.html'">
+                            <div>
+                                <img src="../images/partner/board/board_6.png">
+                            </div>
+                            <p>4ThePlayer GAMES</p>
+                        </li>
+                    </ul>
+                    </div>
+                    <i class="next"></i>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <main>
+        <div class="innerPage">
+            <!--跑馬燈-->
+            <div class="marqueeArea">
+                <div class="center inner">
+                    <div class="marqueeWrap">
+                        <p class="title">
+                            <i class="marquee_ic"></i>
+                            お知らせ
+                        </p>
+                        <div class="marquee">
+                            <p>2023/05/03　ニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキストニューステキスト
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--路徑-->
+            <div class="path">
+                <div class="center inner">
+                    <a href="../index.html">TOP</a>
+                    <span>></span>
+                    <a href="./member.html">マイページトップ</a>
+                    <span>></span>
+                    <a href="./dealHistory.html">取引履歴</a>
+                </div>
+            </div>
+            <!--內容-->
+            <div class="center">
+                <!--左列-->
+                <aside class="innerSide">
+                    <div class="levelBox lv1">
+                        <div class="userInfo">
+                            <div>
+                                <!--上-->
+                                <div class="account">
+                                    <i class="lv"></i>
+                                    <p>
+                                        username
+                                        <span class="levels">
+                                            ビジター
+                                        </span>
+                                    </p>
+                                </div>
+                                <!--中-->
+                                <ul class="quickSelect">
+                                    <li onclick="window.location.href='./deposit.html'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 30 30">
+                                            <path class="cls-1" d="m15,.86c7.8,0,14.14,6.34,14.14,14.14s-6.34,14.14-14.14,14.14S.86,22.8.86,15,7.2.86,15,.86M15,0C6.72,0,0,6.72,0,15s6.72,15,15,15,15-6.72,15-15S23.28,0,15,0h0Z"/>
+                                            <g>
+                                              <path class="cls-1" d="m6.75,19.97c-.18,0-.32.14-.32.32v3.49c0,.18.14.32.32.32h16.51c.18,0,.32-.14.32-.32v-3.49c0-.18-.14-.32-.32-.32h-4.13v-11.75c0-.18-.14-.32-.32-.32h-1.9v-.63c.18,0,.32-.14.32-.32v-1.59c0-.18-.14-.32-.32-.32h-7.3c-.18,0-.32.14-.32.32v1.59c0,.18.14.32.32.32v.93l-.63,3.78c-.01.09,0,.18.06.25l.57.72v4.17c0,.75.53,1.4,1.27,1.56v1.3h-4.13Zm.32.63h3.81v.64h-.95c-.18,0-.32.14-.32.32v.63h-2.54v-1.59Zm12.06,0h3.81v1.59h-2.54v-.63c0-.18-.14-.32-.32-.32h-.95v-.64Zm-.63-12.06v2.2c-1.15-.15-2.06-1.05-2.2-2.2h2.2Zm-2.79,12.7h-1.4c-.28-1.36-1.41-2.39-2.79-2.52v-3.4h0c.06,1.93,1.67,3.44,3.6,3.38s3.44-1.67,3.38-3.6c-.06-1.88-1.61-3.38-3.49-3.38-.9,0-1.77.34-2.42.97l-.33-1c1.4-.21,2.43-1.41,2.43-2.83v-.32h.97c.15,1.5,1.34,2.69,2.84,2.84v7.33c-1.39.13-2.52,1.16-2.79,2.52Zm2.79-1.88v1.88h-2.14c.26-1.01,1.11-1.76,2.14-1.88Zm-4.84,1.88h-2.14v-1.88c1.03.13,1.88.88,2.14,1.88Zm2.62-5.08c.18,0,.32-.14.32-.32v-.32h.32c.18,0,.32-.14.32-.32s-.14-.32-.32-.32h-.37c-.18-.5-.72-.76-1.22-.58-.38.13-.63.49-.63.9,0,.18-.14.32-.32.32s-.32-.14-.32-.32v-.63c0-.18-.14-.32-.32-.32s-.32.14-.32.32v.32h-.32s0,0,0,0c.08-.21.08-.44,0-.65l-.29-.87c.54-.65,1.34-1.03,2.19-1.02,1.58,0,2.86,1.28,2.86,2.86,0,1.58-1.28,2.86-2.86,2.86-1.45,0-2.66-1.08-2.84-2.51.15,0,.31-.04.44-.11.07-.04.13-.08.19-.13.04.13.16.21.3.21h.37c.18.5.72.76,1.22.58.38-.13.63-.49.63-.9,0-.18.14-.32.32-.32s.32.14.32.32v.63c0,.18.14.32.32.32Zm-6.35-10.48h6.67v.95h-6.67v-.95Zm-.3,6.26l.61-3.67s0-.03,0-.05v-.95h6.03v.63h-1.9c-.18,0-.32.14-.32.32v.63c0,1.23-1,2.22-2.22,2.22-.18,0-.32.14-.32.32,0,.03,0,.07.02.1l.97,2.94c.06.19-.04.4-.23.46-.14.05-.3,0-.4-.12l-2.24-2.83Zm.62,5.17v-3.37l.65.83h-.02v3.44c-.38-.13-.63-.49-.63-.9Zm9.52,4.76v.63c0,.18.14.32.32.32h2.86v.63H7.06v-.63h2.86c.18,0,.32-.14.32-.32v-.63h9.52Z"/>
+                                              <path class="cls-1" d="m22.3,11.71h-1.27c-.18,0-.32.14-.32.32v4.13h-.32c-.18,0-.32.14-.32.32,0,.06.01.11.04.16l1.27,2.22c.09.15.28.21.43.12.05-.03.09-.07.12-.12l1.27-2.22c.09-.15.03-.35-.12-.43-.05-.03-.1-.04-.16-.04h-.32v-4.13c0-.18-.14-.32-.32-.32Zm-.63,6.34l-.72-1.26h.09c.18,0,.32-.14.32-.32v-4.13h.64v4.13c0,.18.14.32.32.32h.09l-.72,1.26Z"/>
+                                            </g>
+                                          </svg>
+                                        <p>入金</p>
+                                    </li>
+                                    <li onclick="window.location.href='./transfer.html'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 30 30">
+                                            <g id="exchange-transfer-money-bank-financial">
+                                              <path class="cls-1" d="m11.01,12.54c-.17,0-.31-.14-.31-.31s-.14-.31-.31-.31h-1.23c-.17,0-.31.14-.31.31,0,.83.48,1.58,1.23,1.94v.52c0,.17.14.31.31.31h1.23c.17,0,.31-.14.31-.31v-.52c1.07-.51,1.53-1.79,1.02-2.86-.36-.75-1.11-1.22-1.94-1.22-.17,0-.31-.14-.31-.31s.14-.31.31-.31.31.14.31.31.14.31.31.31h1.23c.17,0,.31-.14.31-.31,0-.83-.48-1.58-1.23-1.94v-.52c0-.17-.14-.31-.31-.31h-1.23c-.17,0-.31.14-.31.31v.51c-.6.28-1.04.83-1.18,1.48-.25,1.16.48,2.31,1.65,2.56.15.03.3.05.46.05.17,0,.31.14.31.31s-.14.31-.31.31Zm0-1.23c-.46,0-.9-.21-1.19-.57-.29-.37-.41-.84-.31-1.3.11-.52.49-.94.99-1.11.12-.04.2-.16.2-.29v-.41h.61v.41c0,.13.08.25.2.29.51.18.88.61.99,1.14h-.64c-.17-.48-.7-.73-1.18-.56-.48.17-.73.7-.56,1.18.13.37.48.61.87.61.85,0,1.53.69,1.53,1.54,0,.65-.41,1.22-1.02,1.44-.12.04-.2.16-.2.29v.41h-.61v-.41c0-.13-.08-.25-.2-.29-.51-.18-.88-.61-.99-1.14h.64c.17.48.7.73,1.18.56.48-.17.73-.7.56-1.18-.13-.37-.48-.61-.87-.61Z"/>
+                                              <path class="cls-1" d="m11.01,16.23c2.88,0,5.22-2.34,5.22-5.22s-2.34-5.22-5.22-5.22-5.22,2.34-5.22,5.22c0,2.88,2.34,5.22,5.22,5.22Zm0-9.83c2.54,0,4.61,2.06,4.61,4.61s-2.06,4.61-4.61,4.61-4.61-2.06-4.61-4.61c0-2.54,2.06-4.6,4.61-4.61Z"/>
+                                              <path class="cls-1" d="m18.99,13.77c-2.88,0-5.22,2.34-5.22,5.22s2.34,5.22,5.22,5.22,5.22-2.34,5.22-5.22c0-2.88-2.34-5.22-5.22-5.22Zm0,9.83c-2.54,0-4.61-2.06-4.61-4.61s2.06-4.61,4.61-4.61,4.61,2.06,4.61,4.61c0,2.54-2.06,4.6-4.61,4.61Z"/>
+                                              <path class="cls-1" d="m22.28,18.16l-3.07-3.07c-.12-.12-.32-.12-.44,0l-3.07,3.07c-.09.09-.11.22-.06.33.05.12.16.19.28.19h.92v2.15h-.31c-.17,0-.31.14-.31.31v1.23c0,.17.14.31.31.31h4.91c.17,0,.31-.14.31-.31v-1.23c0-.17-.14-.31-.31-.31h-.31v-2.15h.92c.12,0,.24-.07.28-.19.05-.11.02-.25-.06-.33Zm-1.14,3.9h-4.3v-.61h4.3v.61Zm-3.68-1.23v-2.15h.61v2.15h-.61Zm1.23,0v-2.15h.61v2.15h-.61Zm1.23,0v-2.15h.61v2.15h-.61Zm-3.25-2.76l2.33-2.33,2.33,2.33h-4.66Z"/>
+                                              <circle class="cls-1" cx="18.99" cy="17.15" r=".61"/>
+                                              <path class="cls-1" d="m7.37,16.71l.66.66.43-.43-1.23-1.23c-.12-.12-.31-.12-.43,0l-1.23,1.23.43.43.74-.74c.37,3.95,3.68,6.96,7.64,6.97v-.61c-3.59,0-6.61-2.7-7.02-6.28Z"/>
+                                              <path class="cls-1" d="m22.63,13.29l-.66-.66-.43.43,1.23,1.23c.12.12.31.12.43,0l1.23-1.23-.43-.43-.74.74c-.37-3.95-3.68-6.96-7.64-6.97v.61c3.59,0,6.61,2.7,7.02,6.28Z"/>
+                                            </g>
+                                            <path class="cls-1" d="m15,.86c7.8,0,14.14,6.34,14.14,14.14s-6.34,14.14-14.14,14.14S.86,22.8.86,15,7.2.86,15,.86M15,0C6.72,0,0,6.72,0,15s6.72,15,15,15,15-6.72,15-15S23.28,0,15,0h0Z"/>
+                                          </svg>
+                                        <p>振替</p>
+                                    </li>
+                                    <li onclick="window.location.href='./withdraw.html'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 30 30">
+                                            <path class="cls-1" d="m15,.86c7.8,0,14.14,6.34,14.14,14.14s-6.34,14.14-14.14,14.14S.86,22.8.86,15,7.2.86,15,.86M15,0C6.72,0,0,6.72,0,15s6.72,15,15,15,15-6.72,15-15S23.28,0,15,0h0Z"/>
+                                            <g id="Cash-Finance-Loan-Money-Income">
+                                              <path class="cls-1" d="m17.51,9.46c0-1.22-.98-2.2-2.2-2.2s-2.2.98-2.2,2.2.98,2.2,2.2,2.2c1.21,0,2.2-.99,2.2-2.2Zm-3.77,0c0-.87.7-1.57,1.57-1.57s1.57.7,1.57,1.57-.7,1.57-1.57,1.57c-.87,0-1.57-.7-1.57-1.57Z"/>
+                                              <path class="cls-1" d="m20.34,6h-10.06c-.69,0-1.26.56-1.26,1.26s.56,1.26,1.26,1.26h.63v2.71l-1.33,2.31c-.57.99-.81,2.13-.68,3.26l.44,4v.92h-.31c-.17,0-.31.14-.31.31v2.51c0,.17.14.31.31.31h5.66c.17,0,.31-.14.31-.31v-2.51c0-.17-.14-.31-.31-.31h-.26l.4-.66c.32-.54.49-1.15.49-1.78v-.41c0-.44-.08-.88-.25-1.29l-.11-.26h4.44c.17,0,.31-.14.31-.31v-8.49h.63c.69,0,1.26-.56,1.26-1.26s-.56-1.26-1.26-1.26Zm-8.8,8.51c.22.03.43.08.63.17v2.01h-.63v-2.18Zm-1.26-6.62c-.35,0-.63-.28-.63-.63,0-.35.28-.63.63-.63h.63v1.26h-.63Zm4.09,16.34h-5.03v-1.89h5.03v1.89Zm.31-4.96c0,.51-.14,1.02-.41,1.46l-.49.82s-.04.1-.04.16h-3.77v-.94s0-.02,0-.03l-.45-4.02c-.11-1,.1-2.01.61-2.88l.79-1.36v4.52c0,.17.14.31.31.31h.94v.31h.63v-3.14c0-.35.28-.63.63-.63.35,0,.63.28.63.63v2.2s0,.08.02.12l.4,1.01c.14.33.21.69.2,1.05v.41Zm4.4-2.59h-2.18c.14-1.14,1.04-2.03,2.18-2.18v2.18Zm0-2.81c-1.49.15-2.66,1.33-2.81,2.81h-1.56l-.03-.06v-2.14c0-.69-.56-1.26-1.25-1.26-.52,0-.99.32-1.17.8-.23-.08-.47-.13-.72-.16v-7.25h7.54v7.24Zm1.7-6.17c-.12.12-.28.19-.44.19h-.63v-1.26h.63c.35,0,.63.28.63.63,0,.17-.07.33-.19.44Z"/>
+                                              <path class="cls-1" d="m24.08,16.24c-.05-.11-.16-.18-.28-.18h-.63v-5.66h-.63v5.97c0,.17.14.31.31.31h.27l-.9,1.08-.9-1.08h.27c.17,0,.31-.14.31-.31v-5.97h-.63v5.66h-.63c-.17,0-.31.14-.31.31,0,.07.03.14.07.2l1.57,1.89c.11.13.31.15.44.04.01-.01.03-.03.04-.04l1.57-1.89c.08-.09.09-.22.04-.33Z"/>
+                                              <path class="cls-1" d="m9.63,11.84c-.05-.11-.16-.18-.28-.18h-.63v-5.66h-.63v5.97c0,.17.14.31.31.31h.27l-.9,1.08-.9-1.08h.27c.17,0,.31-.14.31-.31v-5.97h-.63v5.66h-.63c-.17,0-.31.14-.31.31,0,.07.03.14.07.2l1.57,1.89c.11.13.31.15.44.04.01-.01.03-.03.04-.04l1.57-1.89c.08-.09.09-.22.04-.33Z"/>
+                                            </g>
+                                          </svg>
+                                        <p>出金</p>
+                                    </li>
+                                </ul>
+                                <!--下-->
+                                <div class="userStatus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 25.53 24">
+                                        <path class="cls-1" d="m24.37,10.67v-2.84c0-1.32-1.07-2.39-2.38-2.39h-1.56L7.72.14c-.9-.38-1.93.04-2.31.94,0,.01-.01.03-.02.04l-1.73,4.32h-1.28C1.07,5.43,0,6.5,0,7.82H0v13.79c0,1.32,1.07,2.39,2.38,2.39h19.6c1.32,0,2.39-1.07,2.39-2.38h0v-2.85c.64-.02,1.16-.55,1.16-1.2v-5.71c0-.65-.52-1.17-1.16-1.2h0ZM6.48,1.54c.06-.15.17-.27.32-.34.15-.06.31-.06.46,0l10.14,4.22h-2.81l-6.87-2.29c-.29-.1-.62.05-.73.34l-.75,1.95h-1.32l1.56-3.89Zm4.46,3.89h-3.44l.38-1.01,3.05,1.01Zm12.28,16.18c0,.68-.55,1.23-1.23,1.23H2.39c-.68,0-1.23-.55-1.23-1.23V7.82c0-.68.55-1.23,1.23-1.23h19.59c.68,0,1.23.55,1.23,1.23v2.83h-5.22c-2.24,0-4.06,1.82-4.06,4.06s1.82,4.06,4.06,4.06h5.22v2.83Zm1.16-4.04s-.02.04-.05.05h-6.34c-1.6,0-2.9-1.3-2.9-2.9s1.3-2.9,2.9-2.9l6.38.05v5.71Z"></path>
+                                        <path class="cls-1" d="m17.99,12.97c-.96,0-1.74.78-1.74,1.74s.78,1.74,1.74,1.74,1.74-.78,1.74-1.74-.78-1.74-1.74-1.74Zm0,2.32c-.32,0-.58-.26-.58-.58s.26-.58.58-.58.58.26.58.58-.26.58-.58.58Z"></path>
+                                        <path class="cls-1" d="m6.96,9.49c0,.32-.26.58-.58.58h-2.32c-.32,0-.58-.26-.58-.58s.26-.58.58-.58h2.32c.32,0,.58.26.58.58Z"></path>
+                                        <path class="cls-1" d="m9.28,11.81c0,.32-.26.58-.58.58h-4.64c-.32,0-.58-.26-.58-.58s.26-.58.58-.58h4.64c.32,0,.58.26.58.58Z"></path>
+                                    </svg>
+                                    <p>&#165; 88,888</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 20 17.04">
+                                        <path class="cls-1" d="m5.94,9.78c.28-.32.05-.82-.37-.82h-1.26c0-.12-.01-.25-.01-.38,0-3.15,2.56-5.71,5.71-5.71,1.51,0,2.89.59,3.91,1.56l1.78-2.09C14.14.92,12.13.14,10,.14c-2.26,0-4.38.88-5.98,2.48s-2.47,3.72-2.47,5.98c0,.13,0,.25,0,.38H.49c-.42,0-.65.5-.37.82l2.4,2.76.5.58,1.81-2.08,1.1-1.26Z"></path>
+                                        <path class="cls-1" d="m19.88,8.18l-1.79-2.06-1.12-1.28-1.59,1.83-1.31,1.51c-.28.32-.05.82.37.82h1.26c-.21,2.96-2.68,5.31-5.7,5.31-1.32,0-2.53-.45-3.5-1.2l-1.78,2.09c1.49,1.2,3.34,1.85,5.28,1.85,2.26,0,4.38-.88,5.98-2.47,1.5-1.5,2.37-3.47,2.47-5.57h1.07c.42,0,.65-.5.37-.82Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="innerNav">
+                            <li onclick="window.location.href='./member.html'">
+                                <p>マイページトップ</p>
+                            </li>
+                            <li onclick="window.location.href='./kyc.html'">
+                                <p>KYC認証（本人確認）</p>
+                            </li>
+                            <li onclick="window.location.href='./mail.html'">
+                                <p>お知らせ
+                                    <i class="warning"></i>
+                                </p>
+                            </li>
+                            <li onclick="window.location.href='./vip.html'">
+                                <p>VIPクラブ</p>
+                            </li>
+                            <li onclick="window.location.href='./my4genBonus.html'">
+                                <p>友達紹介ボーナス</p>
+                            </li>
+                            <li onclick="window.location.href='./bonus.html'">
+                                <p>各種ボーナス履歴</p>
+                            </li>
+                            <li class="active" onclick="window.location.href='./dealHistory.html'">
+                                <p>取引履歴</p>
+                            </li>
+                            <li onclick="window.location.href='./bankCard.html'">
+                                <p>入出金口座設定</p>
+                            </li>
+                            <li onclick="window.location.href='./promotionApply.html'">
+                                <p>プロモーション申請</p>
+                            </li>
+                            <li onclick="window.location.href='./maintenance.html'">
+                                <p>定期メンテナンス案内</p>
+                            </li>
+                            <li onclick="window.location.href='../index.html'">
+                                <p>ログアウト</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="helpList">
+                        <p>困ったときは…</p>
+                        <ul class="content">
+                            <li onclick="window.location.href='./help.html'">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 70 70">
+                                    <path class="cls-1" d="m35,2c18.2,0,33,14.8,33,33s-14.8,33-33,33S2,53.2,2,35,16.8,2,35,2M35,0C15.67,0,0,15.67,0,35s15.67,35,35,35,35-15.67,35-35S54.33,0,35,0h0Z"/>
+                                    <g>
+                                      <path class="cls-1" d="m21.62,40h5c1.04,0,1.88-.84,1.88-1.88v-13.75c0-1.04-.84-1.88-1.88-1.88h-5c-1.04,0-1.88.84-1.88,1.88v13.75c0,1.04.84,1.88,1.88,1.88Zm5-1.25h-5c-.35,0-.62-.28-.62-.62v-1.88h6.25v1.88c0,.35-.28.62-.62.62Zm-5.62-3.75v-8.12h6.25v8.12h-6.25Zm.62-11.25h5c.35,0,.62.28.62.62v1.25h-6.25v-1.25c0-.35.28-.62.62-.62Z"/>
+                                      <path class="cls-1" d="m31.62,40h5c1.04,0,1.88-.84,1.88-1.88v-13.75c0-1.04-.84-1.88-1.88-1.88h-5c-1.04,0-1.88.84-1.88,1.88v13.75c0,1.04.84,1.88,1.88,1.88Zm5-1.25h-5c-.35,0-.62-.28-.62-.62v-1.88h6.25v1.88c0,.35-.28.62-.62.62Zm-5.62-3.75v-8.12h6.25v8.12h-6.25Zm.62-11.25h5c.35,0,.62.28.62.62v1.25h-6.25v-1.25c0-.35.28-.62.62-.62Z"/>
+                                      <path class="cls-1" d="m41.62,40h5c1.04,0,1.88-.84,1.88-1.88v-13.75c0-1.04-.84-1.88-1.88-1.88h-5c-1.04,0-1.88.84-1.88,1.88v13.75c0,1.04.84,1.88,1.88,1.88Zm5-1.25h-5c-.35,0-.62-.28-.62-.62v-5.62h6.25v5.62c0,.35-.28.62-.62.62Zm-5-15h5c.35,0,.62.28.62.62v6.88h-6.25v-6.88c0-.35.28-.62.62-.62Z"/>
+                                      <path class="cls-1" d="m26,28.12h-3.75c-.35,0-.62.28-.62.62v1.25h1.25v-.62h2.16c-.98.88-2.79,2.73-2.79,4.38h1.25c0-1.14,1.77-2.99,2.89-3.89.15-.12.23-.3.23-.49v-.62c0-.35-.28-.62-.62-.62Z"/>
+                                      <path class="cls-1" d="m36,28.12h-3.75c-.35,0-.62.28-.62.62v1.25h1.25v-.62h2.16c-.98.88-2.79,2.73-2.79,4.38h1.25c0-1.14,1.77-2.99,2.89-3.89.15-.12.23-.3.23-.49v-.62c0-.35-.28-.62-.62-.62Z"/>
+                                      <path class="cls-1" d="m42.87,25.62h2.16c-.98.88-2.79,2.73-2.79,4.38h1.25c0-1.14,1.77-2.99,2.89-3.89.15-.12.23-.3.23-.49v-.62c0-.35-.28-.62-.62-.62h-3.75c-.35,0-.62.28-.62.62v1.25h1.25v-.62Z"/>
+                                      <path class="cls-1" d="m44.12,33.75c-1.04,0-1.88.84-1.88,1.88s.84,1.88,1.88,1.88,1.88-.84,1.88-1.88-.84-1.88-1.88-1.88Zm0,2.5c-.35,0-.62-.28-.62-.62s.28-.62.62-.62.62.28.62.62-.28.62-.62.62Z"/>
+                                      <rect class="cls-1" x="18.5" y="17.5" width="1.25" height="1.25"/>
+                                      <rect class="cls-1" x="21" y="17.5" width="28.75" height="1.25"/>
+                                      <path class="cls-1" d="m41.62,44.37h-22.5c-.35,0-.62.28-.62.62v6.25c0,.35.28.62.62.62h13.14c.57.75,1.47,1.25,2.49,1.25,1.02,0,1.91-.5,2.48-1.25h4.39c.35,0,.62-.28.62-.62v-6.25c0-.35-.28-.62-.62-.62Zm-13.86,1.25c-.26.73-.94,1.25-1.76,1.25s-1.5-.52-1.76-1.25h3.52Zm6.99,6.25c-1.04,0-1.88-.84-1.88-1.88s.84-1.88,1.88-1.88,1.88.84,1.88,1.88-.84,1.88-1.88,1.88Zm6.25-1.25h-3.19c.04-.2.06-.41.06-.62,0-1.73-1.4-3.12-3.12-3.12s-3.12,1.4-3.12,3.12c0,.21.02.42.06.62h-11.94v-5h3.19c.29,1.43,1.55,2.5,3.06,2.5,1.51,0,2.77-1.07,3.06-2.5h11.94v5Z"/>
+                                      <path class="cls-1" d="m49.12,44.37h-5c-.35,0-.62.28-.62.62v6.25c0,.35.28.62.62.62h5c.35,0,.62-.28.62-.62v-6.25c0-.35-.28-.62-.62-.62Zm-.62,6.25h-3.75v-5h3.75v5Z"/>
+                                      <rect class="cls-1" x="45.37" y="46.25" width="2.5" height="1.25"/>
+                                      <rect class="cls-1" x="45.37" y="48.75" width="2.5" height="1.25"/>
+                                      <path class="cls-1" d="m55.37,33.75h-.62v-9.49c.73-.26,1.25-.95,1.25-1.76,0-1.04-.84-1.88-1.88-1.88s-1.88.84-1.88,1.88c0,.82.52,1.5,1.25,1.76v9.49h-.62v-.62c0-.35-.28-.62-.62-.62h-1.25v-11.36c.73-.26,1.25-.95,1.25-1.76v-2.5c0-1.04-.84-1.88-1.88-1.88H17.87c-1.04,0-1.88.84-1.88,1.88v2.5c0,.82.52,1.5,1.25,1.76v20.23c-.73.26-1.25.94-1.25,1.76v11.25c0,.35.28.62.62.62h35c.35,0,.62-.28.62-.62v-11.25c0-.82-.52-1.5-1.25-1.76v-1.36h1.25c.35,0,.62-.28.62-.62v-.62h2.5c.35,0,.62-.28.62-.62v-3.75c0-.35-.28-.62-.62-.62Zm-1.25-11.88c.35,0,.62.28.62.62s-.28.62-.62.62-.62-.28-.62-.62.28-.62.62-.62Zm-4.38,19.38h-31.25v-20h31.25v20ZM17.25,16.87c0-.35.28-.62.62-.62h32.5c.35,0,.62.28.62.62v2.5c0,.35-.28.62-.62.62H17.87c-.35,0-.62-.28-.62-.62v-2.5Zm33.75,36.88H17.25v-10.62c0-.35.28-.62.62-.62h32.5c.35,0,.62.28.62.62v10.62Zm.62-15h-.62v-5h.62v5Zm3.12-1.25h-1.88v-2.5h1.88v2.5Z"/>
+                                    </g>
+                                  </svg>
+                                <p>ゲームの始め方
+                                    <br>
+                                    (KYCの説明)
+                                </p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 70 70">
+                                    <path class="cls-1" d="m35,2c18.2,0,33,14.8,33,33s-14.8,33-33,33S2,53.2,2,35,16.8,2,35,2M35,0C15.67,0,0,15.67,0,35s15.67,35,35,35,35-15.67,35-35S54.33,0,35,0h0Z"/>
+                                    <g id="Page-1">
+                                      <g id="_060---Money-Bag" data-name="060---Money-Bag">
+                                        <path id="Shape" class="cls-1" d="m51.09,46.1c.79-1.09,1.22-2.39,1.22-3.74.01-.24-.1-.46-.3-.59-.2-.13-.45-.14-.67-.03-.21.11-.35.32-.36.56,0,1.06-.32,2.1-.94,2.97-1.3,1.65-3.77,1.73-4.25,1.73-.37,0-.67.3-.67.67s.3.67.67.67c.59,0,3.61-.11,5.3-2.23h0Z"/>
+                                        <path id="Shape-2" data-name="Shape" class="cls-1" d="m43.43,30.49c-.14-.11-.31-.17-.49-.15-.18.02-.34.1-.45.24l-2.82,3.39-2.82-3.39c-.24-.28-.66-.32-.94-.09-.28.24-.32.66-.09.94l2.42,2.91h-1.24c-.37,0-.67.3-.67.67s.3.67.67.67h2v1.33h-2c-.37,0-.67.3-.67.67s.3.67.67.67h2v2.67c0,.37.3.67.67.67s.67-.3.67-.67v-2.67h2c.37,0,.67-.3.67-.67s-.3-.67-.67-.67h-2v-1.33h2c.37,0,.67-.3.67-.67s-.3-.67-.67-.67h-1.24l2.42-2.91c.11-.14.17-.31.15-.49-.02-.18-.1-.34-.24-.45h0Z"/>
+                                        <path id="Shape-3" data-name="Shape" class="cls-1" d="m54.44,37.51c-1.64-6.98-5.29-11.03-7.93-13.14,3.31.25,4.37,1.63,4.4,1.67.21.3.62.37.92.17.3-.2.38-.61.18-.92-.05-.07-.97-1.39-3.67-2,.69-.57,1.1-1.4,1.12-2.3-.09-1.48-1.12-2.73-2.55-3.11.06-.48.09-.97.09-1.45,0-.45-.23-.86-.6-1.11-.37-.25-.84-.29-1.26-.12-.34.15-.65.35-.93.6-.33.34-.78.52-1.25.52-.47,0-.92-.18-1.24-.52-1.17-1.09-2.99-1.09-4.16,0-.33.34-.78.52-1.25.52-.47,0-.92-.18-1.24-.52-.28-.24-.59-.44-.93-.59-.41-.17-.88-.13-1.25.12-.37.25-.6.66-.6,1.11,0,1.66.33,4.62,2.4,6.6-1.09.66-2.11,1.44-3.04,2.31v-5.03c0-1.52-2.15-2.67-5-2.67s-5,1.15-5,2.67v6.72c-2.34.23-4,1.28-4,2.62v16.96c-1.61.43-2.67,1.31-2.67,2.38v3.33c0,1.52,2.15,2.67,5,2.67,2.55,0,4.53-.92,4.92-2.2,1.15.61,2.44.91,3.74.87,2.85,0,5-1.15,5-2.67v-8.67c0-1.52-2.15-2.67-5-2.67-.33,0-.67.02-1,.05v-10.05c0-1.46-1.98-2.57-4.67-2.66v-4.83c1.13.58,2.4.86,3.67.82,1.27.04,2.53-.24,3.67-.82v4.55c-.44.49-.88,1.03-1.32,1.62-.2.3-.13.7.16.91.29.21.69.16.92-.12.43-.58.89-1.14,1.37-1.67,0,0,.01-.01.02-.02,1.27-1.41,2.77-2.61,4.42-3.55.33.16.67.27,1.03.34l-1.72,1.6c-.27.25-.28.67-.03.94.25.27.67.28.94.03l2.67-2.49h.21v2c0,.37.3.67.67.67s.67-.3.67-.67v-2h.21l2.67,2.49c.17.16.42.22.65.15.23-.07.4-.26.46-.49.05-.23-.02-.48-.19-.64l-1.73-1.61c.35-.07.7-.19,1.02-.34,1.76.95,7.55,4.72,9.72,13.93.94,4.01.6,7.07-1.01,9.11-2.06,2.6-5.65,2.74-6.34,2.74h-9.46c-.37,0-.67.3-.67.67s.3.67.67.67h9.46c1.13,0,5-.23,7.39-3.24,1.88-2.37,2.3-5.82,1.26-10.24h0Zm-34.44,10.15c2.2,0,3.67.8,3.67,1.33s-1.46,1.33-3.67,1.33-3.67-.8-3.67-1.33,1.46-1.33,3.67-1.33Zm0,6c-2.2,0-3.67-.8-3.67-1.33v-1.49c1.13.58,2.4.86,3.67.82,1.27.04,2.53-.24,3.67-.82v1.49c0,.53-1.46,1.33-3.67,1.33Zm8.67-1.33c-2.2,0-3.67-.8-3.67-1.33v-6.82c1.13.58,2.4.86,3.67.82,1.27.04,2.53-.24,3.67-.82v6.82c0,.53-1.46,1.33-3.67,1.33Zm3.67-10c0,.53-1.46,1.33-3.67,1.33s-3.67-.8-3.67-1.33,1.46-1.33,3.67-1.33,3.67.8,3.67,1.33Zm-8.67,0v4.82c-1.13-.58-2.4-.86-3.67-.82-.33,0-.67.02-1,.05v-14.87c1.13.58,2.4.86,3.67.82,1.27.04,2.53-.24,3.67-.82v8.44c-1.61.43-2.67,1.31-2.67,2.38Zm2.67-12.67c0,.53-1.46,1.33-3.67,1.33s-3.67-.8-3.67-1.33,1.46-1.33,3.67-1.33,3.67.8,3.67,1.33Zm.33-8c-2.2,0-3.67-.8-3.67-1.33s1.46-1.33,3.67-1.33,3.67.8,3.67,1.33-1.46,1.33-3.67,1.33Zm21.47-.67c0,1.09-1.18,1.99-2.67,2-.25,0-.5-.03-.74-.08.97-1.03,1.64-2.31,1.95-3.69.8.24,1.38.94,1.46,1.77h0Zm-13.89-4.15c.56.53,1.31.82,2.08.81.77,0,1.52-.29,2.08-.81.33-.33.78-.52,1.25-.52s.92.19,1.25.52c.56.53,1.31.82,2.08.81.77,0,1.52-.29,2.08-.81.18-.16.39-.3.61-.41,0,1.24-.23,4.3-2.38,5.98-.48.36-1.07.56-1.67.57.58-.99,1.03-2.05,1.36-3.15.06-.23,0-.48-.17-.65-.17-.17-.41-.24-.64-.18-.23.06-.41.24-.48.47-.37,1.25-.94,2.44-1.68,3.51h-.69c-.74-1.07-1.31-2.26-1.68-3.51-.1-.35-.47-.56-.82-.46-.35.1-.56.47-.46.82.33,1.1.78,2.16,1.36,3.15-.62,0-1.22-.2-1.71-.58-2.15-1.68-2.38-4.74-2.38-5.97.22.11.43.24.61.41h0Z"/>
+                                        <path id="Shape-4" data-name="Shape" class="cls-1" d="m51.09,46.1c.79-1.09,1.22-2.39,1.22-3.74,0-.18-.05-.35-.17-.48-.12-.13-.28-.21-.46-.22-.37-.01-.68.27-.7.63,0,1.06-.32,2.1-.94,2.97-1.3,1.64-3.77,1.73-4.25,1.73-.37,0-.67.3-.67.67s.3.67.67.67c.59,0,3.61-.11,5.3-2.23h0Z"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                <p>入出金方法</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 70 70">
+                                    <path class="cls-1" d="m35,0C15.67,0,0,15.67,0,35s15.67,35,35,35,35-15.67,35-35S54.33,0,35,0Zm0,68c-18.2,0-33-14.8-33-33S16.8,2,35,2s33,14.8,33,33-14.8,33-33,33Z"/>
+                                    <path class="cls-1" d="m51.88,20h-1.88v1.25h1.88c1.04,0,1.88.84,1.88,1.88v20.62H16.25v-20.62c0-1.04.84-1.88,1.88-1.88h1.88v-1.25h-1.88c-1.72,0-3.12,1.4-3.12,3.12v22.5c0,1.73,1.4,3.12,3.12,3.12h9.26l-.42,2.5h-.72c-1.04,0-1.88.84-1.88,1.88s.84,1.88,1.88,1.88h17.5c1.04,0,1.88-.84,1.88-1.88s-.84-1.88-1.88-1.88h-.72l-.42-2.5h9.26c1.73,0,3.12-1.4,3.12-3.12v-22.5c0-1.73-1.4-3.12-3.12-3.12Zm-7.5,33.12c0,.35-.28.62-.62.62h-17.5c-.35,0-.62-.28-.62-.62s.28-.62.62-.62h17.5c.35,0,.62.28.62.62Zm-2.61-1.88h-13.52l.42-2.5h12.69l.42,2.5Zm10.11-3.75H18.13c-1.04,0-1.88-.84-1.88-1.88v-.62h37.5v.62c0,1.04-.84,1.88-1.88,1.88Z"/>
+                                    <path class="cls-1" d="m40.82,30.45c.12.11.27.17.43.17s.32-.06.43-.17l4.14-3.96s.09-.09.14-.14c1.27-1.34,1.2-3.46-.14-4.73-1.25-1.17-3.16-1.32-4.57-.35-1.42-.97-3.32-.82-4.57.35-.05.05-.09.09-.14.14-1.27,1.34-1.2,3.46.14,4.73l4.14,3.96Zm-3.28-7.93c.44-.42,1.03-.65,1.64-.65.61,0,1.2.23,1.64.65.24.23.62.23.86,0,.92-.86,2.36-.86,3.28,0,.03.03.07.07.1.1.79.85.74,2.17-.1,2.96l-3.71,3.55-3.71-3.55s-.07-.07-.1-.1c-.79-.85-.74-2.17.1-2.96Z"/>
+                                    <path class="cls-1" d="m22.5,41.25h12.5c1.04,0,1.88-.84,1.88-1.88v-.62h4.38c1.04,0,1.88-.84,1.88-1.88v-.62h4.38c1.04,0,1.88-.84,1.88-1.88v-17.5c0-1.04-.84-1.88-1.88-1.88h-12.5c-1.04,0-1.88.84-1.88,1.88v.62h-4.38c-1.04,0-1.88.84-1.88,1.88v.62h-4.38c-1.04,0-1.88.84-1.88,1.88v17.5c0,1.04.84,1.88,1.88,1.88Zm11.88-24.38c0-.35.28-.62.62-.62h12.5c.35,0,.62.28.62.62v17.5c0,.35-.28.62-.62.62h-12.5c-.35,0-.62-.28-.62-.62v-17.5Zm-6.25,2.5c0-.35.28-.62.62-.62h4.38v1.25h-3.12c-.35,0-.62.28-.62.62v15c0,.35.28.62.62.62h2.5v-1.25h-1.88v-13.75h2.5v13.12c0,1.04.84,1.88,1.88,1.88h6.88v.62c0,.35-.28.62-.62.62h-12.5c-.35,0-.62-.28-.62-.62v-17.5Zm-6.25,2.5c0-.35.28-.62.62-.62h4.38v1.25h-3.12c-.35,0-.62.28-.62.62v15c0,.35.28.62.62.62h2.5v-1.25h-1.88v-13.75h2.5v13.12c0,1.04.84,1.88,1.88,1.88h6.88v.62c0,.35-.28.62-.62.62h-12.5c-.35,0-.62-.28-.62-.62v-17.5Z"/>
+                                    <path class="cls-1" d="m49.19,38.57c.12-.12.18-.28.18-.44,0-.35-.28-.63-.62-.63h-3.75c-.35,0-.62.28-.62.62v3.75c0,.17.07.32.18.44.24.24.64.24.88,0l.81-.81,1.43,1.43c.12.12.28.18.44.18.17,0,.32-.07.44-.18l1.25-1.25c.24-.24.24-.64,0-.88l-1.43-1.43.81-.81Zm-.7,2.68l-.37.37-1.43-1.43c-.12-.12-.28-.18-.44-.18s-.32.07-.44.18l-.18.18v-1.62h1.62l-.18.18c-.24.24-.24.64,0,.88l1.43,1.43Z"/>
+                                    <rect class="cls-1" x="51.25" y="23.12" width="1.25" height="1.25"/>
+                                    <rect class="cls-1" x="51.25" y="25.62" width="1.25" height="8.12"/>
+                                    <rect class="cls-1" x="17.5" y="31.87" width="1.25" height="1.25"/>
+                                    <rect class="cls-1" x="17.5" y="34.37" width="1.25" height="8.12"/>
+                                  </svg>
+                                <p>
+                                    ゲームルール、
+                                    <br>
+                                    遊び方
+                                </p>
+                            </li>
+                            <li class="opposite">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 70 70">
+                                    <path class="cls-1" d="m50,26.84l.06-.09.24-.4v-.02c1.44-2.62,2.2-5.59,2.2-8.61C52.5,7.95,44.65,0,35,0s-17.51,7.95-17.51,17.72c0,3.02.77,5.99,2.22,8.61v.02s.12.22.12.22l.16.27c.15.25.3.5.46.74,2.43,3.67,6.1,6.28,10.32,7.34,1.38.35,2.8.52,4.23.52s2.85-.17,4.22-.52c4.22-1.06,7.89-3.67,10.32-7.34.16-.24.32-.49.46-.74Zm-2.06-.55s-.07.1-.11.16c-2.15,3.24-5.38,5.55-9.11,6.48-2.42.61-5.02.61-7.45,0-3.72-.93-6.96-3.24-9.11-6.48-.03-.05-.07-.11-.1-.16,1.61-2.81,4.07-5.02,7-6.3,1.53,1.51,3.62,2.45,5.94,2.45s4.41-.94,5.94-2.45c2.93,1.28,5.38,3.49,7,6.29h0Zm-19.4-12.46c0-3.61,2.9-6.55,6.46-6.55s6.45,2.94,6.45,6.55c0,1.38-.42,2.67-1.14,3.72-.45.65-1,1.21-1.64,1.66-1.04.74-2.31,1.17-3.67,1.17s-2.63-.43-3.68-1.17c-.64-.45-1.19-1.01-1.63-1.66-.72-1.05-1.15-2.34-1.15-3.72Zm13.71,4.5c.79-1.31,1.25-2.85,1.25-4.5,0-4.74-3.81-8.6-8.5-8.6s-8.51,3.86-8.51,8.6c0,1.65.46,3.19,1.26,4.5-2.75,1.32-5.1,3.35-6.81,5.88-.92-2.03-1.39-4.24-1.39-6.49,0-8.64,6.93-15.66,15.45-15.66s15.45,7.02,15.45,15.66c0,2.26-.47,4.47-1.39,6.5-1.71-2.54-4.06-4.57-6.81-5.89Z"/>
+                                    <path class="cls-1" d="m70,46.57c0-5.81-4.68-10.54-10.42-10.54s-10.42,4.73-10.42,10.54c0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.14.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.37.82.21,1.67.31,2.52.31s1.69-.1,2.51-.31c2.52-.63,4.7-2.18,6.15-4.37.09-.14.18-.28.27-.43l.15-.26.15-.24-.02-.03c.79-1.51,1.21-3.18,1.21-4.9Zm-5.28,6.69c-.13.12-.27.22-.41.31-.25.18-.51.34-.79.48-.16.1-.33.19-.51.26-.45.21-.93.38-1.42.5-1.31.33-2.72.33-4.03,0-.25-.06-.49-.13-.72-.22-.24-.08-.47-.17-.7-.28-.23-.1-.45-.21-.66-.34-.22-.12-.43-.25-.64-.4-.15-.1-.29-.2-.43-.33-.11-.08-.22-.17-.32-.27-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15s-.07-.1-.1-.16c.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-.48.7-1.06,1.32-1.71,1.82Zm-8.38-8.91c0-1.81,1.45-3.29,3.24-3.29s3.24,1.48,3.24,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.38,1.54-2.42,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.14,5.02c-.87-1.09-1.95-1.99-3.17-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.64-2.31,1.54-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.47,2.8Z"/>
+                                    <path class="cls-1" d="m10.42,36.03c-5.75,0-10.42,4.73-10.42,10.54,0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.15.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.37.82.21,1.67.31,2.52.31s1.69-.1,2.51-.31c2.52-.63,4.7-2.18,6.15-4.37.09-.14.18-.29.27-.43l.15-.26.14-.24v-.02c.78-1.51,1.2-3.19,1.2-4.91,0-5.81-4.68-10.54-10.42-10.54Zm5.14,17.23c-.13.12-.27.22-.41.31-.25.18-.51.34-.79.48-.16.1-.33.19-.51.26-.45.21-.93.38-1.42.5-1.31.33-2.72.33-4.03,0-.25-.06-.49-.13-.72-.22-.24-.08-.47-.17-.7-.28-.23-.1-.45-.21-.66-.34-.22-.12-.43-.25-.64-.4-.15-.1-.29-.2-.43-.33-.11-.08-.22-.17-.32-.27-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15-.04-.05-.07-.1-.1-.16.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-.48.7-1.06,1.32-1.71,1.82Zm-8.38-8.91c0-1.81,1.45-3.29,3.24-3.29s3.23,1.48,3.23,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.37,1.54-2.41,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.14,5.02c-.87-1.09-1.95-1.99-3.17-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.64-2.31,1.54-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.47,2.8Z"/>
+                                    <path class="cls-1" d="m35,48.92c-5.75,0-10.42,4.73-10.42,10.54,0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.14.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.38.82.2,1.67.3,2.52.3s1.69-.1,2.51-.3c2.52-.64,4.7-2.19,6.15-4.38.09-.14.19-.29.27-.43l.15-.26.14-.24v-.02c.78-1.51,1.2-3.19,1.2-4.91,0-5.81-4.68-10.54-10.42-10.54Zm2.75,18.56c-.24.09-.49.17-.74.23-1.31.33-2.72.33-4.03,0-1.29-.33-2.48-.96-3.47-1.85-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15-.04-.05-.07-.11-.1-.16.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-1.01,1.48-2.45,2.57-4.1,3.15Zm-5.99-10.24c0-1.81,1.45-3.29,3.24-3.29s3.23,1.48,3.23,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.37,1.54-2.41,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.13,5.02c-.86-1.09-1.94-1.99-3.16-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.65-2.31,1.55-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.48,2.8Z"/>
+                                    <rect class="cls-1" x="33.97" y="37.75" width="2.05" height="6.12"/>
+                                    <rect class="cls-1" x="15.86" y="33.04" width="6.08" height="2.05" transform="translate(-18.62 23.58) rotate(-45.36)"/>
+                                    <rect class="cls-1" x="50.12" y="30.99" width="2.05" height="6.08" transform="translate(-9.16 45.75) rotate(-44.64)"/>
+                                  </svg>
+                                <p>
+                                    アフィリエイト
+                                    <br>
+                                    プログラムはこちら
+                                </p>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <!-- 右列 -->
+                <section class="rightSide">
+                    <div class="container dealHistory">
+                        <div class="content">
+                            <p class="title">取引履歴</p>
+                            <div class="buttonGroup">
+                                <button type="button" class="active referralBtn Btn">取引履歴</button>
+                                <button type="button" class="bonusHistoryBtn Btn">ベット額履歴</button>
+                                <button type="button" class="rebateHistoryBtn Btn">ベット履歴</button>
+                            </div>
+                            <div class="dateGroup display">
+                                <form action="">
+                                    <div class="inputGroup display">
+                                        <!-- 日期範圍 -->
+                                        <label for="">
+                                            <p>タイプ</p>
+                                            <select name="" id="">
+                                                <option value="">入金</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                        <p>※60日以内のデータを参照することが出来ます</p>
+                                    </div>
+                                    <div class="inputGroup">
+                                        <label for="">
+                                            <p>アカウント</p>
+                                            <select name="" id="">
+                                                <option value="">全てのアカウント</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                        <label for="">
+                                            <p>プラットフォーム</p>
+                                            <select name="" id="">
+                                                <option value="">全て</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 日期範圍 -->
+                                    <div class="selectDate">
+                                        <label>
+                                            <p>日付</p>
+                                            <input type="text" placeholder="2023-07-17　-　2023-07-17">
+                                            <button type="button" class="calendar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 22 21.61">
+                                                    <g id="_15" data-name="15">
+                                                        <g>
+                                                        <path class="cls-1" d="m5.38,5.04h.31c.48,0,.87-.39.87-.87V.89c0-.48-.39-.87-.87-.87h-.31c-.48,0-.87.39-.87.87v3.28c0,.48.39.87.87.87Z"/>
+                                                        <path class="cls-1" d="m16.48,5.02h.31c.48,0,.87-.39.87-.87V.87c0-.48-.39-.87-.87-.87h-.31c-.48,0-.87.39-.87.87v3.28c0,.48.39.87.87.87Z"/>
+                                                        <path class="cls-1" d="m20.59,1.78h-2.22v2.6c0,.87-.7,1.34-1.57,1.34h-.31c-.87,0-1.57-.7-1.57-1.57V1.78h-7.65v2.39c0,.87-.7,1.57-1.57,1.57h-.31c-.87,0-1.57-.7-1.57-1.57V1.78H1.41c-.78,0-1.41.63-1.41,1.41v17.01c0,.78.63,1.41,1.41,1.41h19.18c.78,0,1.41-.63,1.41-1.41V3.19c0-.78-.63-1.41-1.41-1.41Zm0,18.42H1.41V7.35s19.18,0,19.18,0v12.85s0,0,0,0Z"/>
+                                                        <path class="cls-1" d="m11.73,11.66h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18Z"/>
+                                                        <path class="cls-1" d="m15.85,11.66h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18Z"/>
+                                                        <path class="cls-1" d="m3.48,15.25h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18Z"/>
+                                                        <path class="cls-1" d="m7.6,15.25h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18Z"/>
+                                                        <path class="cls-1" d="m11.73,15.25h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18Z"/>
+                                                        <path class="cls-1" d="m15.85,15.25h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18Z"/>
+                                                        <path class="cls-1" d="m6,16.28h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18Z"/>
+                                                        <path class="cls-1" d="m10.13,16.28h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18Z"/>
+                                                        <path class="cls-1" d="m14.26,16.28h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18Z"/>
+                                                        <path class="cls-1" d="m18.38,16.28h-2.53c-.1,0-.18.08-.18.18v2.19c0,.1.08.18.18.18h2.53c.1,0,.18-.08.18-.18v-2.19c0-.1-.08-.18-.18-.18Z"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </label>
+                                        <!-- 日期按鈕 -->
+                                        <div class="btnGroup">
+                                            <div class="dateBtn">
+                                                <button type="button" class="active">昨日</button>
+                                                <button type="button">今日</button>
+                                                <button type="button">今週</button>
+                                                <button type="button">今月</button>
+                                                <button type="button">先月</button>
+                                            </div>
+                                            <!-- 搜尋按鈕 -->
+                                            <button type="button" class="searchBtn">檢索</button>
+                                        </div>
+                                    </div>
+                                    <p class="hint">※60日以内のデータを参照することが出来ます</p>
+                                </form>
+                            </div>
+                            <div class="betGroup">
+                                <!-- 交易紀錄 -->
+                                <div class="transaction display">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <p>日時</p>
+                                                </th>
+                                                <th>
+                                                    <p>取引コード</p>
+                                                </th>
+                                                <th>
+                                                    <p>タイプ</p>
+                                                </th>
+                                                <th>
+                                                    <p>金額</p>
+                                                </th>
+                                                <th>
+                                                    <p>ステータス</p>
+                                                </th>
+                                                <th>
+                                                    <p>備考</p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>銀行振込入金</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 00.00</p>
+                                                </td>
+                                                <td>
+                                                    <p>審査失敗</p>
+                                                </td>
+                                                <td>
+                                                    <p>お客様からのご依頼により、入金申請を取り消<br>し致しました。ご了承の程お願い致します。</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 投注金額紀錄 -->
+                                <div class="amount">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <p>番号</p>
+                                                </th>
+                                                <th>
+                                                    <p>タイプ</p>
+                                                </th>
+                                                <th>
+                                                    <p>金額</p>
+                                                </th>
+                                                <th>
+                                                    <p>ベット額制限</p>
+                                                </th>
+                                                <th>
+                                                    <p>ベット額変化</p>
+                                                </th>
+                                                <th>
+                                                    <p>ロック日</p>
+                                                </th>
+                                                <th>
+                                                    <p>操作</p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165;1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>168855742<br>017513</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇<br>〇〇〇〇</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>2023-07-17<br>13:10:19</p>
+                                                </td>
+                                                <td>
+                                                    <p></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 投注紀錄 -->
+                                <div class="bet">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <p>ゲーム<br>プラットフォーム
+                                                    </p>
+                                                </th>
+                                                <th>
+                                                    <p>ベット金額</p>
+                                                </th>
+                                                <th>
+                                                    <p>有効ベット金額</p>
+                                                </th>
+                                                <th>
+                                                    <p>チップ</p>
+                                                </th>
+                                                <th>
+                                                    <p>結果</p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pragmatic Play Live</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>&#165; 1,234</p>
+                                                </td>
+                                                <td>
+                                                    <p>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="countBlock">
+                                <p>
+                                    合計
+                                    <span class="num">00</span>
+                                    件
+                                </p>
+                                <ul>
+                                    <svg class="prevBtn" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 6.36 11.31">
+                                        <polygon class="cls-1" points=".71 0 0 .71 4.95 5.66 0 10.61 .71 11.31 6.36 5.66 .71 0"></polygon>
+                                    </svg>
+                                    <li class="active">
+                                        <p>1</p>
+                                    </li>
+                                    <li>
+                                        <p>2</p>
+                                    </li>
+                                    <li>
+                                        <p>3</p>
+                                    </li>
+                                    <li>
+                                        <p>4</p>
+                                    </li>
+                                    <li>
+                                        <p>5</p>
+                                    </li>
+                                    <li>
+                                        <p>6</p>
+                                    </li>
+                                    <li>
+                                        <p>7</p>
+                                    </li>
+                                    <svg class="nextBtn" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 6.36 11.31">
+                                        <polygon class="cls-1" points=".71 0 0 .71 4.95 5.66 0 10.61 .71 11.31 6.36 5.66 .71 0"></polygon>
+                                    </svg>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <!--goTop-->
+        <button class="goTop">
+            <i></i>
+        </button>
+        <button class="cs_sideBtn ">
+            <svg xmlns="http://www.w3.org/2000/svg" id="footer" viewBox="0 0 27.58 26.52">
+                <path d="M10.84,25.88v-2.2c0-.23,.12-.43,.32-.55l6.02-3.49c.23-.13,.48-.2,.74-.2h3.67s2.42-.19,2.32-2.42V5.42s.1-1.45-2.42-1.65H6.58s-2.23-.19-2.52,1.65v11.71s0,2.13,1.94,2.03h3.16c.34,0,.62,.27,.63,.62l.06,2.51c0,.36-.28,.65-.63,.65H4.94S.48,22.94,0,18V3.1S-.1,0,4.84,0H22.46c.22,.01,4.93,.28,5.12,4.06v14.05c0,.28-.06,.55-.13,.82-.45,1.84-2.28,3.8-5.32,3.98l-4.34,.03c-.11,0-.22,.03-.32,.09l-5.67,3.4c-.42,.25-.96-.05-.96-.54Z"/>
+              </svg>
+        </button>
+    </nav>
+    <footer>
+        <!--下部-->
+       <div class="footerList">
+            <ul>
+                <li>
+                    <img class="logo" src="../images/icon/logo.png" onclick="window.location.href='../index.html'">
+                    <div class="socialGroup">
+                        <svg class="twitter" onclick="window.location.href='//twitter.com'" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m9.03,9.71c.06.11.1.24.18.33,1.7,1.97,3.83,3.25,6.36,3.85.48.11.97.21,1.46.28.4.06.46,0,.45-.41-.03-.72.04-1.43.32-2.1.58-1.4,1.64-2.21,3.11-2.52,1.38-.29,2.57.08,3.63.97.25.21.53.21.79.12.55-.18,1.08-.42,1.61-.63.13-.05.26-.1.39-.15.03.02.06.04.09.06-.05.18-.06.38-.16.52-.26.38-.56.74-.85,1.1-.1.12-.22.23-.32.35l.06.12c.61-.18,1.22-.35,1.82-.53.02.03.04.05.06.08-.21.28-.39.57-.62.82-.3.33-.62.64-.95.93-.31.28-.48.59-.49,1.02-.02,1.87-.42,3.66-1.27,5.32-1.47,2.88-3.68,4.94-6.8,5.98-1.28.43-2.6.65-3.93.64-2.1-.01-4.11-.52-5.95-1.61-.14-.08-.27-.16-.41-.3,2.12.07,4.06-.41,5.87-1.68-.17-.07-.29-.14-.42-.16-1.64-.29-2.68-1.29-3.3-2.78,0-.02,0-.04,0-.13h1.41s.04-.08.06-.12c-1.79-.8-3-1.99-2.93-4.13.54.17,1.03.33,1.51.48.03-.02.05-.04.08-.07-1.69-1.62-2.04-3.46-1.06-5.53.06-.04.13-.08.19-.12Z"/>
+                            </svg>
+                            <svg class="youtube" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m17,9.88c.86,0,1.72-.04,2.57,0,1.61.09,3.22.19,4.82.36,1.1.12,1.85.81,2.1,1.88.22.96.39,1.95.42,2.94.07,1.77.07,3.56-.17,5.32-.06.42-.09.85-.2,1.25-.29,1.05-.99,1.73-2.06,1.92-.8.14-1.62.21-2.43.24-2.32.07-4.65.16-6.97.14-1.76-.02-3.53-.16-5.29-.32-1.57-.14-2.34-.91-2.64-2.46-.33-1.76-.39-3.53-.26-5.31.08-1.11.2-2.22.32-3.33.16-1.46,1.17-2.21,2.48-2.33,1.14-.1,2.29-.16,3.43-.22,1.29-.06,2.58-.1,3.87-.15,0,.02,0,.03,0,.05Zm-2.1,6.97c0,.88,0,1.76,0,2.63,0,.31.07.36.31.22,1.52-.87,3.05-1.75,4.57-2.61.17-.1.17-.19.03-.31-.07-.06-.15-.11-.23-.16-1.45-.84-2.89-1.68-4.34-2.51-.27-.16-.35-.11-.35.2,0,.85,0,1.69,0,2.54Z"/>
+                            </svg>
+                            <svg class="facebook" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m22.55,14.06c-.06.49-.12.97-.18,1.45-.1.76-.2,1.52-.29,2.27-.03.21-.13.28-.33.28-.83,0-1.65-.02-2.48-.02-.4,0-.42.02-.42.42,0,3.03,0,6.06,0,9.09,0,.42,0,.42-.42.42-1.16,0-2.32,0-3.47,0-.3,0-.39-.1-.39-.39,0-3.03,0-6.06,0-9.09,0-.46,0-.46-.47-.46-.89,0-1.78,0-2.67,0-.26,0-.34-.09-.34-.34.01-1.11.01-2.21,0-3.32,0-.26.09-.34.34-.33.91.01,1.82,0,2.73,0,.4,0,.4,0,.4-.39,0-.86-.01-1.72,0-2.57.02-1.37.35-2.64,1.25-3.71.77-.92,1.8-1.32,2.95-1.49,1.19-.18,2.37-.07,3.55.14.29.05.39.2.39.49-.01.88-.01,1.76,0,2.64,0,.25-.09.32-.32.32-.6,0-1.2-.02-1.79.06-.94.13-1.54.7-1.64,1.64-.1.88-.07,1.77-.09,2.66,0,.22.15.23.32.23,1.06,0,2.13-.01,3.19-.02.05,0,.1,0,.19.02Z"/>
+                            </svg>
+                            <svg class="line" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 33.78 33.78">
+                            <circle class="cls-2" cx="16.89" cy="16.89" r="16.86"/>
+                            <path class="cls-1" d="m26.42,15.01c-.36-2.25-1.59-3.91-3.46-5.13-1.82-1.18-3.84-1.69-5.64-1.77-1.26,0-2.16.11-3.04.32-2.32.54-4.3,1.63-5.71,3.58-1.5,2.06-1.73,4.33-.72,6.66.61,1.43,1.67,2.55,2.98,3.41,1.15.76,2.44,1.21,3.79,1.47.3.05.61.12.9.21.42.13.64.45.63.89,0,.38-.05.76-.1,1.14-.06.51.16.72.65.55.27-.09.53-.22.79-.35,1.82-.95,3.49-2.14,5.06-3.44,1.07-.89,2.07-1.85,2.82-3.03.89-1.39,1.31-2.86,1.05-4.51Zm-13.42,3.4c-.71.02-1.43.02-2.14.01-.34-.01-.43-.13-.43-.47v-3.56c0-.37.11-.5.45-.51.33-.01.55.2.56.53.01.45,0,.9,0,1.36,0,.42.01.85,0,1.27-.01.24.07.33.32.32.4-.01.8-.01,1.2,0,.38,0,.5.12.52.5.02.34-.14.54-.48.55Zm2.1-2.26c0,.56.01,1.12,0,1.68,0,.34-.16.55-.43.58-.28.03-.52-.15-.59-.47-.03-.15-.05-.31-.05-.46.02-1.04.04-2.09.06-3.13.01-.36.13-.47.5-.47.29,0,.5.18.51.47.01.6,0,1.2,0,1.8Zm4.65,1.89c0,.26-.09.35-.35.37-.26.02-.5-.04-.68-.24-.19-.21-.38-.43-.55-.66-.36-.48-.71-.97-1.06-1.45-.07-.09-.11-.2-.17-.3-.06.03-.11.07-.16.1v.54c0,.5,0,1,0,1.49-.01.43-.41.66-.75.44-.12-.07-.24-.26-.24-.39-.02-1.22,0-2.44,0-3.66,0-.23.13-.35.35-.39.34-.05.61.09.81.35.49.64.96,1.29,1.45,1.94.06.09.14.17.27.25.01-.09.03-.18.03-.27v-1.83c0-.38.07-.44.46-.45.48-.01.61.07.61.44.01,1.24.01,2.48,0,3.72Zm1.73-2.5s.16.06.25.07c.33.01.66,0,.99.01.13,0,.27.02.39.06.24.09.37.33.33.57-.04.24-.16.35-.46.36-.4.02-.81,0-1.21.01-.32,0-.34.03-.34.36s.01.36.33.37c.32,0,.64-.01.96,0,.14.01.27.03.4.07.24.08.38.35.34.59-.04.25-.19.39-.48.4-.7.01-1.4.02-2.1.01-.3-.01-.45-.2-.46-.52v-3.53c0-.35.12-.48.46-.49.66-.01,1.32,0,1.98,0,.21,0,.42.03.54.25.18.33-.02.71-.42.73-.4.02-.8,0-1.21.01-.11,0-.3.05-.31.11-.03.18,0,.37.02.55Z"/>
+                            </svg>
+                    </div>
+                    <span>©2023 APA Casino.</span>
+                </li>
+                <li>
+                    <p class="title">サイトメニュー</p>
+                    <button type="button" onclick="window.location.href='./help.html'">弊社について</button>
+                    <button type="button" onclick="window.location.href='./help.html'">プライバシーポリシー</button>
+                    <button type="button" onclick="window.location.href='./help.html'">ご利用規約</button>
+                    <button type="button" onclick="window.location.href='./help.html'">責任あるプレイ</button>
+                    <button type="button" onclick="window.location.href='./help.html'">プロモーション</button>
+                    <button type="button" onclick="window.location.href='./help.html'">アフィリエイト</button>
+                    <button type="button" onclick="window.location.href='./help.html'">ライセンス</button>
+                </li>
+                <li>
+                    <p class="title">ユーザーガイド</p>
+                    <button type="button" onclick="window.location.href='./help.html'">KYC</button>
+                    <button type="button" onclick="window.location.href='./help.html'">ゲームルール・遊び方</button>
+                    <button type="button" onclick="window.location.href='./help.html'">プロモーション</button>
+                    <button type="button" onclick="window.location.href='./help.html'">入出金と振替</button>
+                    <button type="button" onclick="window.location.href='./help.html'">入出金方法</button>
+                    <button type="button" onclick="window.location.href='./help.html'">登録とアカウント</button>
+                    <button type="button" onclick="window.location.href='./help.html'">お問い合わせ</button>
+                </li>
+                <li>
+                    <button type="button" class="serviceBtn opposite" onclick="window.location.href='javascript:;'">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 70 70">
+                            <path class="cls-1" d="m50,26.84l.06-.09.24-.4v-.02c1.44-2.62,2.2-5.59,2.2-8.61C52.5,7.95,44.65,0,35,0s-17.51,7.95-17.51,17.72c0,3.02.77,5.99,2.22,8.61v.02s.12.22.12.22l.16.27c.15.25.3.5.46.74,2.43,3.67,6.1,6.28,10.32,7.34,1.38.35,2.8.52,4.23.52s2.85-.17,4.22-.52c4.22-1.06,7.89-3.67,10.32-7.34.16-.24.32-.49.46-.74Zm-2.06-.55s-.07.1-.11.16c-2.15,3.24-5.38,5.55-9.11,6.48-2.42.61-5.02.61-7.45,0-3.72-.93-6.96-3.24-9.11-6.48-.03-.05-.07-.11-.1-.16,1.61-2.81,4.07-5.02,7-6.3,1.53,1.51,3.62,2.45,5.94,2.45s4.41-.94,5.94-2.45c2.93,1.28,5.38,3.49,7,6.29h0Zm-19.4-12.46c0-3.61,2.9-6.55,6.46-6.55s6.45,2.94,6.45,6.55c0,1.38-.42,2.67-1.14,3.72-.45.65-1,1.21-1.64,1.66-1.04.74-2.31,1.17-3.67,1.17s-2.63-.43-3.68-1.17c-.64-.45-1.19-1.01-1.63-1.66-.72-1.05-1.15-2.34-1.15-3.72Zm13.71,4.5c.79-1.31,1.25-2.85,1.25-4.5,0-4.74-3.81-8.6-8.5-8.6s-8.51,3.86-8.51,8.6c0,1.65.46,3.19,1.26,4.5-2.75,1.32-5.1,3.35-6.81,5.88-.92-2.03-1.39-4.24-1.39-6.49,0-8.64,6.93-15.66,15.45-15.66s15.45,7.02,15.45,15.66c0,2.26-.47,4.47-1.39,6.5-1.71-2.54-4.06-4.57-6.81-5.89Z"/>
+                            <path class="cls-1" d="m70,46.57c0-5.81-4.68-10.54-10.42-10.54s-10.42,4.73-10.42,10.54c0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.14.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.37.82.21,1.67.31,2.52.31s1.69-.1,2.51-.31c2.52-.63,4.7-2.18,6.15-4.37.09-.14.18-.28.27-.43l.15-.26.15-.24-.02-.03c.79-1.51,1.21-3.18,1.21-4.9Zm-5.28,6.69c-.13.12-.27.22-.41.31-.25.18-.51.34-.79.48-.16.1-.33.19-.51.26-.45.21-.93.38-1.42.5-1.31.33-2.72.33-4.03,0-.25-.06-.49-.13-.72-.22-.24-.08-.47-.17-.7-.28-.23-.1-.45-.21-.66-.34-.22-.12-.43-.25-.64-.4-.15-.1-.29-.2-.43-.33-.11-.08-.22-.17-.32-.27-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15s-.07-.1-.1-.16c.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-.48.7-1.06,1.32-1.71,1.82Zm-8.38-8.91c0-1.81,1.45-3.29,3.24-3.29s3.24,1.48,3.24,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.38,1.54-2.42,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.14,5.02c-.87-1.09-1.95-1.99-3.17-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.64-2.31,1.54-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.47,2.8Z"/>
+                            <path class="cls-1" d="m10.42,36.03c-5.75,0-10.42,4.73-10.42,10.54,0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.15.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.37.82.21,1.67.31,2.52.31s1.69-.1,2.51-.31c2.52-.63,4.7-2.18,6.15-4.37.09-.14.18-.29.27-.43l.15-.26.14-.24v-.02c.78-1.51,1.2-3.19,1.2-4.91,0-5.81-4.68-10.54-10.42-10.54Zm5.14,17.23c-.13.12-.27.22-.41.31-.25.18-.51.34-.79.48-.16.1-.33.19-.51.26-.45.21-.93.38-1.42.5-1.31.33-2.72.33-4.03,0-.25-.06-.49-.13-.72-.22-.24-.08-.47-.17-.7-.28-.23-.1-.45-.21-.66-.34-.22-.12-.43-.25-.64-.4-.15-.1-.29-.2-.43-.33-.11-.08-.22-.17-.32-.27-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15-.04-.05-.07-.1-.1-.16.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-.48.7-1.06,1.32-1.71,1.82Zm-8.38-8.91c0-1.81,1.45-3.29,3.24-3.29s3.23,1.48,3.23,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.37,1.54-2.41,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.14,5.02c-.87-1.09-1.95-1.99-3.17-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.64-2.31,1.54-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.47,2.8Z"/>
+                            <path class="cls-1" d="m35,48.92c-5.75,0-10.42,4.73-10.42,10.54,0,1.72.41,3.4,1.2,4.91v.02s.13.24.13.24l.15.26c.09.14.18.29.28.43,1.44,2.19,3.63,3.74,6.14,4.38.82.2,1.67.3,2.52.3s1.69-.1,2.51-.3c2.52-.64,4.7-2.19,6.15-4.38.09-.14.19-.29.27-.43l.15-.26.14-.24v-.02c.78-1.51,1.2-3.19,1.2-4.91,0-5.81-4.68-10.54-10.42-10.54Zm2.75,18.56c-.24.09-.49.17-.74.23-1.31.33-2.72.33-4.03,0-1.29-.33-2.48-.96-3.47-1.85-.17-.13-.33-.29-.48-.45-.24-.24-.46-.5-.66-.78-.04-.05-.08-.1-.12-.15-.04-.05-.07-.11-.1-.16.82-1.32,2-2.38,3.39-3.05.93.83,2.14,1.32,3.46,1.32s2.53-.49,3.46-1.31c1.4.66,2.57,1.73,3.39,3.05-1.01,1.48-2.45,2.57-4.1,3.15Zm-5.99-10.24c0-1.81,1.45-3.29,3.24-3.29s3.23,1.48,3.23,3.29c0,.58-.15,1.13-.41,1.6-.49.9-1.37,1.54-2.41,1.67-.13.02-.27.03-.41.03s-.28-.01-.41-.03c-1.05-.13-1.93-.77-2.42-1.67-.26-.47-.41-1.02-.41-1.6Zm11.13,5.02c-.86-1.09-1.94-1.99-3.16-2.63.36-.72.56-1.53.56-2.39,0-2.94-2.38-5.34-5.29-5.34s-5.29,2.4-5.29,5.34c0,.86.2,1.67.56,2.39-1.23.65-2.31,1.55-3.17,2.64-.31-.9-.47-1.84-.47-2.81,0-4.68,3.75-8.49,8.37-8.49s8.37,3.81,8.37,8.49c0,.96-.16,1.91-.48,2.8Z"/>
+                            <rect class="cls-1" x="33.97" y="37.75" width="2.05" height="6.12"/>
+                            <rect class="cls-1" x="15.86" y="33.04" width="6.08" height="2.05" transform="translate(-18.62 23.58) rotate(-45.36)"/>
+                            <rect class="cls-1" x="50.12" y="30.99" width="2.05" height="6.08" transform="translate(-9.16 45.75) rotate(-44.64)"/>
+                            </svg>
+                        <div class="txtitem">
+                            <p>アフィリエイト</p>
+                            <p>プログラムはこちら</p>
+                        </div>
+                    </button>
+                    <button type="button" class="iframe-box">
+                        <img src="../images/icon/GC-icon.png">
+                    </button>
+                    <button type="button" class="twitter" onclick="window.location.href='//twitter.com/AU8_Japan'"></button>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="filter">
+        <!-- 世代目 -->
+        <div class="jumpWindow generation">
+            <div class="title">
+                <p>
+                    紹介者一覧 - 
+                    <span class="type">2世代目</span>
+                </p>
+                <svg class="close_ic" xmlns="http://www.w3.org/2000/svg" id="popup" viewBox="0 0 26 26">
+                    <circle class="cls-2" cx="13" cy="13" r="13"/>
+                    <circle class="cls-1" cx="13" cy="13" r="12"/>
+                    <g>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                    </g>
+                  </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>
+                            <p></p>
+                        </th>
+                        <th>
+                            <p></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p></p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="countBlock">
+                    <ul>
+                        <svg class="prevBtn" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 6.36 11.31">
+                            <polygon class="cls-1" points=".71 0 0 .71 4.95 5.66 0 10.61 .71 11.31 6.36 5.66 .71 0"/>
+                        </svg>
+                        <li class="active">
+                            <p>1</p>
+                        </li>
+                        <svg class="nextBtn" xmlns="http://www.w3.org/2000/svg" id="sidemenu" viewBox="0 0 6.36 11.31">
+                            <polygon class="cls-1" points=".71 0 0 .71 4.95 5.66 0 10.61 .71 11.31 6.36 5.66 .71 0"/>
+                        </svg>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--最新公告-->
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <svg class="close_ic" xmlns="http://www.w3.org/2000/svg" id="popup" viewBox="0 0 26 26">
+                    <circle class="cls-2" cx="13" cy="13" r="13"/>
+                    <circle class="cls-1" cx="13" cy="13" r="12"/>
+                    <g>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                      <rect class="cls-2" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                    </g>
+                  </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+                      <g>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(13 -5.38) rotate(45)"/>
+                        <rect class="cls-1" x="3" y="12.33" width="20" height="1.33" transform="translate(-5.38 13) rotate(-45)"/>
+                      </g>
+                    </g>
+                </svg>
+            </div>
+            <!--頁籤-->
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">ノーマル</li>
+                <li class="deposit">入金</li>
+            </ul>
+            <!--內容-->
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">人気ゲーム-日本麻雀</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">FORTUNAへようこそ!</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">プロモーション~ライブカジノリベートボーナス</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">プロモーション~スロットリベートボーナス</p>
+                        <p class="date">2021/09/26</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg"></div>
+</body>
+</html>

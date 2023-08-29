@@ -1,0 +1,580 @@
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background: $MainBG_1;
+    z-index: 10;
+
+    //上部
+    &>.top {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+        margin: 0px auto;
+        border-bottom: 1px solid $Border_2;
+
+        //logo
+        .logo {
+            cursor: pointer;
+            padding-right: 30px;
+        }
+
+        .search {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-left: 1px solid $Border_2;
+            padding: 0 32px;
+
+            .searchGroup {
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                label {
+                    width: auto;
+                    position: relative;
+    
+                    input {
+                        width: 100%;
+                        max-width: 407px;
+                        height: 45px;
+                        border: 2px solid $Border_1;
+                        border-radius: 5px;
+                        padding: 0 45px 0 15px;
+    
+                        &::placeholder {
+                            font-size: 16px;
+                            color: $Border_1;
+                        }
+                    }
+
+                    &>i {
+                        width: 19px;
+                        height: 19px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 15px;
+                        cursor: pointer;
+                    }
+                }
+
+                
+            }
+        }
+
+        //右
+        .user {
+            width: auto;
+            height: 100%;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            display: none;
+            flex-shrink: 0;
+            justify-content: flex-end;
+            padding-left: 30px;
+            border-left: 1px solid $Border_2;
+
+            &.display {
+                display: flex;
+            }
+
+            li {
+                display: flex;
+                width: auto;
+                height: 100%;
+                align-items: center;
+                position: relative;
+
+                //未登入選單
+                .loginForm {
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 20px;
+
+                    div {
+                        margin-right: 20px;
+                        display: flex;
+                        align-items: center;
+
+                        p {
+                            font-size: 16px;
+                            color: $fontColor_4;
+                            padding-right: 10px;
+                        }
+                        input {
+                            width: 162px;
+                            height: 45px;
+                            @include headerInput;
+                        }
+                    }
+
+                    button {
+                        width: auto;
+                        min-width: 125px;
+                        height: 34px;
+                        @include headerBtn_1;
+                        margin-right: 10px;
+
+                        &.signupBtn {
+                            @include headerBtn_2;
+                        }
+                    }
+                }
+
+                //忘記密碼
+                &.forget {
+                    color: $fontColor_0;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                    i {
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 5px;
+                    }
+                }
+
+                //語言列
+                &.lang {
+                    position: relative;
+                    &::after {
+                        width: 8px;
+                        height: 8px;
+                        border-style: solid;
+                        border-width: 0 0  2px 2px;
+                        border-color:transparent transparent $Border_12 $Border_12;
+                        right: 15px;
+                        content: "";
+                        position: absolute;
+                        top: 38px;
+                        transform: rotate(-45deg);
+                        pointer-events: none;
+                    }
+                    
+                    select {
+                        width: 124px;
+                        height: 32px;
+                        @include headerLang;
+                    }
+                }
+            }
+
+            //已登入
+            &.alLogin {
+
+                &.innerType {
+
+                    li {
+
+                        &.lv {
+                            margin-right: 60px;
+                        }
+                        
+                        &.payment,
+                        &.transfer,
+                        &.withdraw,
+                        &.mail {
+                            display: none;
+                        }
+                    }
+                }
+
+                li {
+                    margin-right: 15px;
+
+                    button {
+                        width: 42px;
+                        height: 42px;
+                        background: none;
+                        color: $header_Color1;
+                        font-size: 16px;
+                        font-weight: bold;
+                        transition: all 0.3s;
+                        display: flex;
+
+                        i {
+                            width: 42px;
+                            height: 42px;
+                            background-position-y: 0% ;
+                        }
+
+                        &:hover,&:active,&.active {
+
+                            i {
+                                background-position-y: 100% ;
+                            }
+                        }
+
+                        .remind {
+                            min-width: 10px;
+                            min-height: 10px;
+                            @include headerMailRemind;
+                        }
+                    }
+
+                    //等級
+                    &.lv {
+
+                        i {
+                            width: 42px;
+                            height: 42px;
+                            margin-right: 10px;
+                        }
+
+                        .userGroup {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+        
+                            p {
+                                font-size: 16px;
+                                color: $fontColor_13;
+                                padding-bottom: 5px;
+                            }
+
+                            button {
+                                width: 94px;
+                                height: 18px;
+                                background: #F8F7F9;
+                                border-radius: 5px;
+                                display: flex;
+                                justify-content: center;
+
+                                p {
+                                    max-width: 94px;
+                                    color: $fontColor_13;
+                                    font-size: 12px;
+                                    @include textHidden;
+                                }
+                            }
+                        }
+                    }
+
+                    &.payment {
+                        i {
+                            background-position-x: 0%;
+                        }
+                    }
+                    &.transfer {
+                        i {
+                            background-position-x: 25%;
+                        }
+                    }
+                    &.withdraw {
+                        i {
+                            background-position-x: 50%;
+                        }
+                    }
+                    &.mail {
+                        i {
+                            background-position-x: 75%;
+                        }
+                    }
+
+                    &.logout {
+
+                        button {
+                            width: 125px;
+                            height: 34px;
+                            background: $mainColor_6;
+                            color: $fontColor_2;
+                            font-size: 16px;
+                            border-radius: 20px;
+                            border: 1px solid transparent;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover,&:active,&.active {
+                                background: $mainColor_3;
+                                color: $mainColor_6;
+                                border-color: $mainColor_6;
+                            }
+                        }
+                    }
+
+                    &.lang {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    //選單
+    &>.gameNav {
+        width: 100%;
+        min-width: 1280px;
+        height: 87px;
+        background: $MainBG_1;
+
+        .center {
+            width: 1280px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    height: 100%;
+                    padding: 0 15px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    color: $fontColor_13;
+                    font-weight: bold;
+                    transition: 0.3s all;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 80%;
+                        height: 3px;
+                        border-radius: 2px;
+                        background: $mainColor_0;
+                        opacity: 0;
+                        position: absolute;
+                        bottom: 25px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    &.suBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_10;
+                            }
+                        }
+                    }
+
+                    &.hotBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_8;
+                            }
+                        }
+                    }
+
+                    &.promotionBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_9;
+                            }
+                        }
+                    }
+
+                    &.liveBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_10;
+                            }
+                        }
+                    }
+
+                    &.slotBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_11;
+                            }
+                        }
+                    }
+
+                    &.fishBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_12;
+                            }
+                        }
+                    }
+
+                    &.boardBtn {
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                background: $fontColor_7;
+                            }
+                        }
+                    }
+                   
+
+                    &:hover,&:active,&.active {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //下拉式選單
+    .topGameList {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
+        bottom: -226px;
+        z-index: 10;
+
+        &.display {
+            height: auto;
+        }
+
+        .listWrap {
+            width: 100%;
+            height: 226px;
+            background: $MainBG_1;
+
+            .center {
+                width: 1280px;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                i {
+                    display: none;
+                    width: 30px;
+                    height: 30px;
+                    background: $topGameList_ArrowBG;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                    padding-right: 2px;
+                    box-sizing: border-box;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 7px;
+                        height: 12px;
+                    }
+
+                    &.prev {
+                        left: -5px;
+                    }
+                    &.next {
+                        transform: scaleX(-1);
+                        right: -5px;
+                    }
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
+                .container {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    &.scroll {
+                        width: 1365px;
+                    }
+
+                    ul {
+                        display: none;
+                        width: auto;
+                        height: 100%;
+                        transition: 0.6s ease;
+
+                        &.display {
+                            display: flex;
+                        }
+
+                        li {
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            position: relative;
+
+                            p {
+                                font-size: 16px;
+                                padding-top: 8px;
+                                text-align: center;
+                                font-weight: bold;
+                                color: $topGameList_Title;
+                            }
+
+                            .fixBox {
+                                display: none;
+                                position: absolute;
+                                width: 92%;
+                                height: 92%;
+                                border-radius: 5px;
+                                background: $filter;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                cursor: not-allowed;
+
+                                &.display {
+                                    display: flex;
+                                }
+        
+                                p {
+                                    color: $topGameList_fixWord;
+                                    font-size: 14px;
+                                    font-weight: bold;
+
+                                    &.title {
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

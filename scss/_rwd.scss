@@ -1,0 +1,137 @@
+@media only screen and (max-width: 1600px) {
+    html {
+
+        body {
+
+           .gameWrap {
+
+                .content {
+
+                    .gameInner {
+
+                        &>ul {
+                            grid-template-columns: repeat(5, 1fr);
+                        }
+                    }
+                }
+           }
+        }
+    }
+}
+@media only screen and (max-width: 1520px) {
+    html {
+
+        body {
+
+           .gameWrap {
+
+                .content {
+
+                    ul {
+                        &.gridWrap {
+                            width: 100%;
+                            grid-template-columns: repeat(3, 1fr);
+                            padding: 0 30px;
+                        }
+                    }
+                }
+           }
+        }
+    }
+}
+@media only screen and (max-width: 1440px) {
+    html {
+
+        body {
+
+            .unLog {
+                
+                .top {
+
+                    .search {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1330px) {
+    html {
+
+        body {
+
+           .gameWrap {
+
+                .content {
+
+                    .gameInner {
+
+                        &>ul {
+                            width: 85%;
+                            grid-template-columns: repeat(4, 1fr);
+                        }
+                    }
+                }
+           }
+        }
+    }
+}
+@media only screen and (max-width: 1300px) {
+    html {
+
+        body {
+
+            .gameWrap {
+
+                .content {
+
+                    .simpleGame {
+
+                        ul {
+                            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1290px) {
+    html {
+
+        body {
+
+            .gameWrap {
+
+                .content {
+
+                    .simpleGame {
+
+                        ul {
+                            padding: 0 40px;
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    html {
+
+        body {
+
+            header {
+                
+                .top {
+
+                    .search {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
